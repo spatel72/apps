@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="img/logo/favicon.png" />
+
+<title>Coastal Clean Energy Projects</title>
+<link type="text/css" rel="stylesheet" href="../../localsite/css/base.css" />
+<script type="text/javascript" src="../../localsite/js/d3.v5.min.js"></script>
+<script type="text/javascript" src="../../localsite/js/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../../localsite/js/localsite.js"></script>
+<script type="text/javascript" src="../../localsite/js/showdown.min.js"></script>
+<script type="text/javascript" src="../../localsite/js/navigation.js"></script>
+
+<script>
+	if (param.partner == "freeclean")  {
+		window.document.title = "Free Clean Energy - Coastal Clean Energy Projects"
+		//param.titleArray = ["Georgia","SEA"]; // carboncapture.energy
+		//param.favicon = "/app/img/logo/favicon.png"
+		loadMarkdown("energy.md", "readmeDiv", "_parent");
+		$(".freeclean").show();
+	} else {
+		window.document.title = "Coastal Waste to Energy"
+		//param.titleArray = ["Georgia","SEA"]; // carboncapture.energy
+		//param.favicon = "/app/img/logo/favicon.png"
+		loadMarkdown("coastal.md", "readmeDiv", "_parent");
+		$(".sea").show();
+	}
+	$(document).ready(function () {
+		if (param.partner == "freeclean") {
+			$(".freeclean").show();
+		} else {
+			$(".sea").show();
+		}
+	});
+</script>
+<style>
+	/*
+	.upperIconsX {display: none;}
+	.herobox {
+		position:absolute;
+		top: 42%;
+		width: 100%;
+		text-align: center;
+	}
+	.herobox-inner {
+		border:1px solid #fff;
+		background-color: rgba(33, 33, 33, 0.6);
+		color: #fff;
+		font-size: 28px;
+		padding: 20px;
+		margin:0 auto;
+		display: inline-block;
+	}
+	*/
+	.bgimg {
+	  positionX: relative;
+	  opacityX: 0.65;
+	  background-attachment: fixed;
+	  background-positionX: center;
+	  background-repeat: no-repeat;
+	  background-sizeX: cover;
+	  background-position: 0 100px; /* adjust for page banner */
+	  background-size: 100% auto;
+	  borderX: 2px solid blue;
+	}
+
+	/* Turn off parallax scrolling for tablets and phones */
+	@media only screen and (max-device-width: 1024px) {
+	    .bgimg {
+	        background-attachment: scroll;
+	    }
+	}
+	.bgcaption {
+	  position: absolute;
+	  left: 0;
+	  top: 50%;
+	  margin-top: -40px;
+	  width: 100%;
+	  text-align: center;
+	  color: #000;
+	}
+	.bgcaption span.border {
+		background-color: #111;
+		color: #fff;
+		padding: 18px 28px;
+		font-size: 25px;
+		letter-spacing: .5px;
+		display: inline-block;
+
+
+		borderX:1px solid #fff;
+
+		background-color: rgba(33, 33, 33, 0.6);
+		color: #fff;
+		font-size: 28px;
+		paddingX: 20px;
+		marginX:0 auto;
+
+		font-weight:400;
+		font-size: 24px;
+		padding: 22px 32px;
+	}
+	@media (max-width: 800px) {
+		.bgcaption {
+		  top: auto;
+		  bottom: 0px;
+		  left:0px;
+		  right:0px;
+		  display: block;
+		}
+	  .bgcaption span.border {
+	    font-size: 18px;
+	  }
+	}
+	.lower-right-text {
+		position: absolute;
+		right: 50px;
+		bottom: 20px;
+		padding-left: 40px;
+		color: #fff;
+		font-size: 22px;
+		font-weight: 200;
+	}
+	.lower-right-text a {
+		color: #fff;
+	}
+	img {
+	  opacity: 0.7;
+	}
+
+	img:hover {
+	  opacity: 1.0;
+	}
+</style>
+</head>
+
+<body>
+
+<!--
+	Design https://igniteprism.com/
+-->
+
+<div style="position:relative; display:none" class="sea freeclean herobox">
+	<div class="bgimg" style="background-image: url('img/hero/ocean-pier-crop-sm.jpg');">
+		<img src="img/hero/ocean-pier-crop-sm.jpg" style="opacity:0;width:100%">
+
+		
+		<!--
+		<div class="bgcaption sea freeclean" style="display:none">
+		    <span class="border" style="padding-leftX:28px">Clean Port Energy</span>
+		</div>
+		-->
+
+			<div class='lower-right-text'>
+				<!--Southeast Environment Association&nbsp;(SEA)-->
+				<a href="http://model.georgia.org">model.georgia.org</a>
+			</div>
+
+	</div>
+</div>
+
+<div style="position:relative;">
+
+	<img class="paralex" src="img/hero/ocean-pier-crop.jpg" class="freeclean sea" style="width:100%; display:none">
+	<img src="img/hero/ocean-crop.jpg" class="cleanport" style="width:100%; display:none">
+
+	<!--
+	<div class="sea freeclean herobox" style="display:none">
+		<div class="herobox-inner">
+		Southeast Environment Association (SEA)
+		</div>
+	</div>
+	-->
+</div>
+
+<div class="content contentpadding" style="padding-top:30px;">
+
+	<div class="narrowscreen" style="width:55%;float:left;padding-right:50px">
+		<div id="readmeDiv"></div>
+	</div>
+	
+	<div class="freeclean sea narrowscreen" style="width:45%;float:left;display:none;padding-top:15px">
+
+		
+		<div style="width:50%; float:left; padding-right:25px" class="narrowscreen">
+		    <a href="img/tech/solar-roof.jpg"><img src="img/tech/solar-roof.jpg" style="width:100%"></a>
+		</div>
+		<div style="width:50%; float:left;" class="narrowscreen">
+		    <a href="img/tech/carbonizer1.png"><img src="img/tech/carbonizer1.png" style="width:100%"></a>
+		</div>
+		<div style="clear:both; margin-bottom:8px"></div>
+
+		<div style="width:50%; float:left; padding-right:25px" class="narrowscreen">
+			<a href="img/tech/carbonizer2.png"><img src="img/tech/carbonizer2.png" style="width:100%"></a>
+		</div>
+		<div style="width:50%; float:left" class="narrowscreen">
+			<a href="img/tech/carbonizer3.png"><img src="img/tech/carbonizer3.png" style="width:100%"></a>
+		</div>
+
+		<div style="clear:both"></div>
+
+		<div class="caption">Solar roof and rotary gassifier kilns under consideration for Bruswick waste-to-energy facility for the production of Activiated Carbon (AC).</div>
+		
+
+		<h3>Markets for Activated Carbon</h3>
+
+		<h4>Water Purification</h4>
+		Carbon used in beds and filters to remove contaminants from drinking and wastewater. 
+
+		Market: > $1B global and > $350M domestic U.S. market, projected to grow by more than 50% in next 5 years 
+
+		<h4>Emission Controls</h4>
+
+		Carbon injected into emissions or used in vessels to remove air pollutants and odors. 
+
+	    Market: > $1B global and > $350M domestic U.S. market, projected to grow by more than 100% in next 5 years 
+
+		<h4>Agricultural Applications</h4>
+	 	Carbon used in animal feed to remove toxins and soil to increase water and nutrient retention and improve crop yields. 
+
+	    Market: Emerging application with potential for > $5B domestic U.S. market 
+
+	    <br><br>
+	</div>
+
+	<div style="clear:both"></div><br>
+
+</div>
+
+<!-- investigate why header gets shorter and text over it disappears when these 2 lines included.-->
+<!-- menus also do not open... due to javascript includes at the top of this page. -->
+<div id="bodyFile"></div>
+<script type="text/javascript" src="../../localsite/js/localsite.js?show=bioeconomy&state=GA&display=everything"></script>
+
+
+</body>
+</html>
