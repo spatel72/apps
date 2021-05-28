@@ -1,5 +1,5 @@
 
-# Coastal Waste to Energy 
+# Coastal Communities 
 
 ## Brunswick Gasifier Project
 
