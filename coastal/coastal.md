@@ -1,6 +1,7 @@
 
 # Southeast Coastal Georgia
 
+<!--
 ## Brunswick Gasifier Project
 
 <p style="margin-bottom:20px">
@@ -9,14 +10,12 @@ Waste 2 Solutions and Free Clean Energy are working with HL Daniel on a proposal
 
 - [Waste 2 Solutions](http://waste2solutions.net)  
 - [Free Clean Energy](../../?partner=freeclean)  
+-->
 
 
+## Activated Carbon Feedstocks
 
-## Potential Activated Carbon Feedstocks
-
-### Activated Carbon from PET Plastic Bottle Waste
-
-Filtering pollution from water using [Activated Carbon from PET bottles](https://www.semanticscholar.org/paper/Preparation-of-high-quality-activated-carbon-from-Mendoza-Carrasco-Cuerda-Correa/f7f362eb4db7ba5f1ab45ebb7d948d16895a76fc).  
+Clean waste-to-energy projects capture carbon from a vaiety of feedstocks.  
 
 <h3 style="margin-bottom:0px">Activated Carbon from Lignin Waste</h3>
 (from paper, rayon and superwood&nbsp;production)
@@ -32,6 +31,11 @@ Step 3: Activate with 800° to 950°C 15-psi steam to add pores.
 (seasonally available)
 
 <!-- Potential Waste-to-Energy Feedstocks -->
+
+### Activated Carbon from PET Plastic Bottle Waste
+
+Filtering pollution from water using [Activated Carbon from PET bottles](https://www.semanticscholar.org/paper/Preparation-of-high-quality-activated-carbon-from-Mendoza-Carrasco-Cuerda-Correa/f7f362eb4db7ba5f1ab45ebb7d948d16895a76fc).  
+
 
 ## Environmentally-Enabled Input-Output (EEIO)&nbsp;Tools  
 
