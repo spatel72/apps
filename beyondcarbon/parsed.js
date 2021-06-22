@@ -29,7 +29,7 @@ d3.csv(parsed, function (data) {
     }
 
 
-    console.log(statesTerritories["Michigan"])
+    console.log(statesTerritories["Alaska"])
 })
 
 
