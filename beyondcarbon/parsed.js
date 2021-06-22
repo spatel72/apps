@@ -1,10 +1,10 @@
-let parsed = "https://assets.bbhub.io/dotorg/sites/40/2019/05/Beyond-Carbon-States_Territories-data-sample-5_22-data-06_06.csv";
+//let parsed = "https://assets.bbhub.io/dotorg/sites/40/2019/05/Beyond-Carbon-States_Territories-data-sample-5_22-data-06_06.csv";
+let parsed = "5_22-data-06_06.csv";
 
-
-
+let statesTerritories = {};
 d3.csv(parsed, function (data) {
     //create object that replaces empty string property with stored state names with state names being keys
-    let statesTerritories = {};
+    
 
     //Loop through csv data to create new State properties
     for (let obj in data) {
@@ -29,7 +29,15 @@ d3.csv(parsed, function (data) {
     }
 
 
-    console.log(statesTerritories["Alaska"])
+    //console.log(statesTerritories["California"])
+    $(document).ready(function() {
+        let theStateName = $("#state_select").find(":selected").text();
+        //alert("theStateName " + theStateName)
+        if(!theStateName) { // Hack. We need to instead trigger when #state_select menu becomes available.
+            theStateName = "Georgia"
+        }
+        $("#parsedOutput").html("<br><b>Under Development</b><br>" + JSON.stringify(statesTerritories[theStateName]));
+    });
 })
 
 
