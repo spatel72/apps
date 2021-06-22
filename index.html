@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Sample App Interfaces</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+<script type="text/javascript" src="../localsite/js/d3.v5.min.js" id="/localsite/js/d3.v5.min.js"></script>
+<script type="text/javascript" src="../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
+<script type="text/javascript" src="../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
+
+<script>
+    if(typeof param == 'undefined') {
+      var param = {};
+    }
+    //if (location.host.indexOf('codeforamerica') >= 0) {
+      param.titleArray = ["My","App"]
+      param.startTitle = "Local App"
+    //}
+</script>
+
+
+<style>
+.bgimg {
+  min-height: 600px;
+}
+#beyond-carbon-rect {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+  margin: 0 auto; /* We'll center instead */
+  max-width: 600px;
+  padding: 50px;
+  padding-bottom: 20px;
+  clear: both;
+}
+#state_select {
+  font-size: 24px;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+</style>
+
+<script>
+  loadMarkdown("apps.md", "readmeDiv", "_parent");
+</script>
+
+</head>
+
+<body>
+
+<div id="state-landscape-image" class="bgimg" style="background-position: 0 54px;">
+
+  <div id="beyond-carbon-rect">
+    <!--Later: Choose two states to compare.-->
+    <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
+    <div id="relocatedStateMenu"></div><br>
+    <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
+
+    <br><br>
+    <b>App Development</b>
+    <div id="readmeDiv"></div>
+
+    <div id="parsedOutput"></div>
+
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../localsite/js/localsite.js?state=NY&indicators=ENRG,JOBS,NNRG,RNRG,VADD&display=everything"></script>
+
+</body>
+</html>
+
+
