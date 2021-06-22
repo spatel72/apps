@@ -23,7 +23,7 @@ d3.csv(parsed, function (data) {
             [stateStance[2]]:stateStanceValues[2],
             [stateStance[3]]:stateStanceValues[3],
             [stateStance[4]]:stateStanceValues[4],
-            [stateStance[5]]:sgtateStanceValues[5],
+            [stateStance[5]]:stateStanceValues[5],
         };
 
     }
