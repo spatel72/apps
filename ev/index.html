@@ -10,6 +10,12 @@
 .filterbarOffset {
   display: none;
 }
+#state_select {
+  font-size: 24px;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
 </style>
 
 </head>
@@ -19,6 +25,9 @@
 <div class="bgimg" style="min-height: 600px; background-position: 0 54px; background-image: url('img/hero/andrew-roberts-charging-crop.jpg');">
 
   <div id="hero-rect">
+
+    <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
+    <div id="relocatedStateMenu"></div><br>
     <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
   </div>
 

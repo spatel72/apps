@@ -20,7 +20,7 @@ Clean waste-to-energy projects capture carbon from a vaiety of feedstocks.
 <h3 style="margin-bottom:0px">Activated Carbon from Lignin Waste</h3>
 (from paper, rayon and superwood&nbsp;production)
 
-[A 2016 study](http://wcponline.com/2016/06/15/lignin-waste-transformed-coconut-like-activated-carbon/) found that lignin provides a coconut-like activated carbon  structure that is two to three times more valuable than activated carbon from wood. Like coconut, lignin has tighter graphitic platelet spacings to remove more small molecules from drinking water. Activated carbon from lignin is softer than from coconut shells, which allows it to be used as a powder for faster absorption of contaminants, with less water-leaching ash than present powdered activated carbons.  
+[A 2016 study](http://wcponline.com/2016/06/15/lignin-waste-transformed-coconut-like-activated-carbon/) found that lignin provides a coconut-like activated carbon  structure that is two to three times more valuable than activated carbon from wood. Like coconut, lignin has tighter graphitic platelet spacings to remove more small molecules from drinking water. Activated carbon from lignin is softer than from coconut shells, which allows it to be used as a powder for faster absorption of contaminants, with less water-leaching ash than other powdered-activated carbons.  
 
 
 Step 1: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960852420309081#b0585">Recent advances in removal of lignin from wastewater</a>  
