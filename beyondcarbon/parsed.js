@@ -39,7 +39,11 @@ d3.csv(parsed, function (data) {
         }
 question.forEach(element => {
     if (element.includes("[XX]" || "[XX's]")) {
-        console.log(element.replace("[XX]" || "[XX's]", theStateName));
+        $(".state-table__question").html(element.replace("[XX]" || "[XX's]", theStateName));
+        $(".state-table__answer").html(answer);
+        
+
+        
         }
     });
         
