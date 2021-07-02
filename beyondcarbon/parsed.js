@@ -37,10 +37,11 @@ d3.csv(parsed, function (data) {
         if(!theStateName) { // Hack. We need to instead trigger when #state_select menu becomes available.
             theStateName = "Georgia"
         }
-        question.forEach(element => {
-            counter = question.length;
-
-        });
+question.forEach(element => {
+    if (element.includes("[XX]" || "[XX's]")) {
+        console.log(element.replace("[XX]" || "[XX's]", theStateName));
+        }
+    });
         
     });
 })
