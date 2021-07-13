@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Beyond Carbon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+<script type="text/javascript" src="https://model.earth/localsite/js/d3.v5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- Set custom parameters here -->
+<script type="text/javascript" src="../../localsite/js/localsite.js?display=everything&lat=37&lon=-95.7&indicators=ENRG,JOBS,VADD,WATR&state=GA"></script>
+
+
+<style>
+#state_select {
+  font-size: 24px;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.state-table {
+  width: 100vw;
+  margin-bottom: 0;
+  display:nonetable;
+  background-color:#eee;
+}
+.state-table-data {
+  display: table-cell;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+  padding: 30px 50px 30px 0px;
+  text-align:left;
+  border-bottom: solid lightgrey 1px;
+  border-right: solid lightgrey 1px; 
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="state-landscape-image" class="bgimg" style="min-height: 600px; background-position: 0 54px;">
+
+  <div id="hero-rect">
+    <!--Later: Choose two states to compare.-->
+    <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
+    <div id="relocatedStateMenu"></div><br>
+    <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
+
+    <div id="dataHeader"></div>
+    <div id="dataList"></div>
+
+  </div>
+
+</div>
+
+
+<script>
+  // Within localhost.js the state menu is moved into the hero image area by the following:
+  // relocatedStateMenu.appendChild(state_select);
+
+  if(typeof param == 'undefined') {
+    var param = {};
+  }
+
+  $(document).ready(function() {
+
+    // `hashChangeEvent` event reside in multiple widgets. Also called by involking goHash() within localsite.js
+    document.addEventListener('hashChangeEvent', function (elem) {
+        //let hash = getHash();
+
+        //let theState = $("#state_select").find(":selected").val();
+        let theStateName = $("#state_select").find(":selected").text();
+        //let theStateNameLowercase = theStateName.toLowerCase();
+
+        alert("theStateName " + theStateName);
+        displayResults(theStateName);
+    }, false);
+  });
+
+  var dataSet = [];
+  function loadHtmlTable(applyFilter) {
+    d3.text("5_22-data-06_06.csv").then(function(data) {
+        dataSet = d3.csvParseRows(data);
+        console.log("loadHtmlTable - dataSet row count: " + dataSet.length);
+        //console.log(dataSet);
+
+        
+          let theStateName = $("#state_select").find(":selected").text();
+          if(!theStateName) { // Hack. We need to instead trigger when #state_select menu becomes available.
+            theStateName = "Georgia"
+          }
+          displayResults(theStateName);
+        
+    });
+  }
+
+  //setTimeout( function() {
+    loadHtmlTable(true); // New list
+  //}, 1000 ); // Allow time for state dropdown to load.
+
+  function displayResults(theStateName) {
+    //alert("displayResults: " + theStateName)
+    let rowcount = 0;
+    let dataRow = "";
+    
+    for(var i = 0; i < dataSet.length; i++) {
+      rowcount++;
+      if (dataSet[i][0]==theStateName) {
+        
+        dataRow += "<table>";
+        dataRow += "<tr><td>Has " + theStateName + " committed to 100% clean energy? " + dataSet[i][1] + "</td></tr>"
+        dataRow += "<tr><td>" + dataSet[i][2].replace("[XX]" || "[XX's]", theStateName) + "</td></tr>"
+        dataRow += "<tr><td>Does " + theStateName + " have a goal for reducing carbon pollution across the entire economy? " + dataSet[i][3] + "</td></tr>"
+        dataRow += "<tr><td>Does " + theStateName + " have goals or incentives for electric vehicles? " + dataSet[i][4] + "</td></tr>"
+        dataRow += "<tr><td>" + dataSet[i][5].replace("[XX]" || "[XX's]", theStateName)  + "</td></tr>"
+        dataRow += "</table>";
+      }
+    }
+    //alert("rowcount " + rowcount);
+    $(dataRow).insertAfter($("#dataHeader"));
+
+    //$("#dataList").append(dataRow);
+
+  }
+</script>
+
+</body>
+</html>
+
+
