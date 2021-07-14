@@ -6,39 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 
-<!-- Old v3 of D3 needs to be change to v5 -->
-<script src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://model.earth/localsite/js/d3.v5.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 <!-- Set custom parameters here -->
 <script type="text/javascript" src="../../localsite/js/localsite.js?display=everything&lat=37&lon=-95.7&indicators=ENRG,JOBS,VADD,WATR&state=GA"></script>
 
-
-<script>
-  // Within localhost.js the state menu is moved into the hero image area by the following:
-  // relocatedStateMenu.appendChild(state_select);
-
-    if(typeof param == 'undefined') {
-      var param = {};
-    }
-
-    $(document).ready(function() {
-
-        // `hashChangeEvent` event reside in multiple widgets. Also called by involking goHash() within localsite.js
-        document.addEventListener('hashChangeEvent', function (elem) {
-            //let hash = getHash();
-
-            //let theState = $("#state_select").find(":selected").val();
-            let theStateName = $("#state_select").find(":selected").text();
-            //let theStateNameLowercase = theStateName.toLowerCase();
-
-            $("#parsedOutput").html("<br><b>Under Development</b><br>" + JSON.stringify(statesTerritories[theStateName]));
-
-        }, false);
-    });
-
-</script>
 
 <style>
 #state_select {
@@ -63,7 +37,14 @@
   border-bottom: solid lightgrey 1px;
   border-right: solid lightgrey 1px; 
 }
-
+#resultsTable td {
+  border-bottom: 1px solid #777;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#resultsTable {
+  margin-bottom: 8px;
+}
 </style>
 
 </head>
@@ -76,19 +57,92 @@
     <!--Later: Choose two states to compare.-->
     <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
     <div id="relocatedStateMenu"></div><br>
-    <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
+    
+    <div id="dataHeader"></div>
+    <div id="dataDisplay"></div>
 
-    <div id="parsedOutput">
-      <a href="v3.html">D3 v3</a><br>
-      <a href="v5.html">D3 v5</a><br>
-    </div>
+    <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
 
   </div>
 
 </div>
-<!--
-<script src="parsed.js"></script>
--->
+
+
+<script>
+  // Within localhost.js the state menu is moved into the hero image area by the following:
+  // relocatedStateMenu.appendChild(state_select);
+
+  if(typeof param == 'undefined') {
+    var param = {};
+  }
+
+  $(document).ready(function() {
+
+    // `hashChangeEvent` event reside in multiple widgets. Also called by involking goHash() within localsite.js
+    document.addEventListener('hashChangeEvent', function (elem) {
+        //let hash = getHash();
+
+        //let theState = $("#state_select").find(":selected").val();
+        let theStateName = $("#state_select").find(":selected").text();
+        //let theStateNameLowercase = theStateName.toLowerCase();
+
+        console.log("theStateName from hashChangeEvent: " + theStateName);
+        displayStateData(theStateName);
+    }, false);
+  });
+
+  var stateDataset = [];
+  function loadHtmlTable(applyFilter) {
+    //alert("loading")
+    d3.text("5_22-data-06_06.csv").then(function(data) {
+        stateDataset = d3.csvParseRows(data);
+        console.log("loadHtmlTable - stateDataset row count: " + stateDataset.length);
+        //alert(stateDataset);
+
+          let theStateName = $("#state_select").find(":selected").text();
+          //alert("theStateName " + theStateName);
+          setTimeout( function() {
+            theStateName = $("#state_select").find(":selected").text();
+            if(!theStateName) { // Hack. We need to instead trigger when #state_select menu becomes available.
+              theStateName = "Georgia"
+            }
+            displayStateData(theStateName);
+          }, 1000 ); // Allow time for state dropdown to load.
+    });
+  }
+
+  //setTimeout( function() {
+    loadHtmlTable(true); // New list
+  //}, 1000 ); // Allow time for state dropdown to load.
+
+  function statePhrase(stateRow, rowIndex, theStateName) {
+    return(stateRow[rowIndex].replace("[XX]" || "[XX's]", theStateName) )
+  }
+  function displayStateData(theStateName) {
+    console.log("displayStateData: " + theStateName)
+    let rowcount = 0;
+    let dataRow = "";
+    
+    for(var i = 0; i < stateDataset.length; i++) {
+      rowcount++;
+      if (stateDataset[i][0]==theStateName) {
+        
+        dataRow += "<table id='resultsTable'>";
+        dataRow += "<tr><td>" + statePhrase(stateDataset[i], 5, theStateName) + "</td></tr>"
+        dataRow += "<tr><td>Has " + theStateName + " committed to 100% clean energy? " + statePhrase(stateDataset[i], 1, theStateName) + "</td></tr>"
+        dataRow += "<tr><td>" + statePhrase(stateDataset[i], 2, theStateName)  + "</td></tr>"
+        dataRow += "<tr><td>Does " + theStateName + " have a goal for reducing carbon pollution across the entire economy? " + statePhrase(stateDataset[i], 3, theStateName)  + "</td></tr>"
+        dataRow += "<tr><td>Does " + theStateName + " have goals or incentives for electric vehicles? " + statePhrase(stateDataset[i], 4, theStateName) + "</td></tr>"
+        dataRow += "</table>";
+      }
+    }
+    //alert("rowcount " + rowcount);
+    //$(dataRow).insertAfter($("#dataHeader"));
+
+    $("#dataDisplay").html(dataRow);
+    //$("#dataHeader").html(dataRow);
+  }
+</script>
 
 </body>
 </html>
