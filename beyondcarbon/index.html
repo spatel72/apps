@@ -48,6 +48,16 @@
 }
 #hero-landscape-image {
   background-image: url(/community/img/hero/hero.png);
+
+  position:absolute;
+  z-index: 100;
+}
+.hero-text {
+  float:left;
+  color:#fff;
+  text-shadow: 2px 2px 8px #111;
+  padding-right:80px;
+  font-weight:800;
 }
 </style>
 
@@ -55,43 +65,55 @@
 
 <body>
 
-<div id="hero-landscape-image" class="bgimg" style="min-height: 600px; background-position: 0 54px;">
+<div id="hero-landscape-image" class="bgimg" style="z-index:-1; min-height: 500px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
+</div>
 
-  <div id="hero-rect" style="max-width: 680px;">
+
+<div class="content contentpadding" style="padding-top:60px">
+  <div class="hero-text">
+
+    <div style="font-size:60px; line-height: 1em; font-weight:800">Beyond<br>Carbon</div><br>
+    <div style="font-size:32px; line-height: 1em; font-weight:400">
+      Sustainable<br>Communities<br>
+      Web Challenge
+    </div><br>
+
+    <div style="font-size:20px; line-height: 1.2em;">
+      
+      <div style="font-size:25px;">Saturday, Oct 2, 2021</div><br> 
+
+      <div style="font-size:18px;">
+      10am EST - EPA Hackahon<br>
+      4pm EST - Awards Ceremony<br><br> 
+      </div>
+
+      <br>
+    </div>
+  </div>
+
+  <div id="hero-rect-new" style="max-width: 680px; float:left">
     <!--Later: Choose two states to compare.-->
-    <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
+    <div style="font-size:22px; margin-bottom:10px; font-weight:400">Choose a state</div>
     <div id="relocatedStateMenu"></div><br>
     
     <div id="dataHeader"></div>
     <div id="dataDisplay"></div>
 
     <div id="choose-counties" style="display:none">
-      <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a><br><br>
+      <a href="#select=counties" onclick="$('#filterClickLocation').click();return false;">Select one or more counties</a><br>
     </div>
 
     <div id="about-profile" style="display:none">
-      <!-- Environmental Product Declaration (EPD) 
-           EPD's avoid sensitive information 
-            Generated from private Life Cycle Assessment (LCA) settings, so your footprint can be 
-          -->
-      Your Goods and Services Profile (GSP) allows you to share settings from your 
-      community Life Cycle Assessment (LCA) settings without privacy concerns.
-      <br><br>
 
-      YAML samples for input settings:<br>
-      <!-- Life Cycle Assessment (LCA) - Individuals, Organizations, Communities<br>-->
-      <!-- Environmental Footprint -->
-      <a href="../../io/template/">Entity Profile Templates</a> - For Community, Organization and Individual Footprints using Environmental Product Declaration (EPD) standards<br>
-      <br>
+      We're integrating Life Cycle Analysis (LCA) tools for local communities.<br>
+      Join one of our project teams to participate:<br><br>
 
-      <!--
-      Your Environmental Profile Data is interchangable with Environmental Product Declarations (EPD) for goods and services.
-      -->
+      React - Environmental Profile Editor Team<br>
+      Python - GitHub Actions Data Team<br>
+      UX/UI - Community Hotspots Team<br>
+      Data Science - Visualizations Team<br>
+      High School - Environmental Impacts Team<br>
 
-      <!--
-      Cloud Carbon Footprint
-      https://www.cloudcarbonfootprint.org/docs/aws/
-      -->
     </div>
 
   </div>
@@ -99,7 +121,62 @@
 </div>
 
 
+
+<div style="clear:both; background-color:#fff; min-height:250px">
+
+  <div class="content contentpadding" style="padding-top:30px;">
+
+
+    <div class="pageColumn">
+      <div class="pageColumnInside">
+
+      <h2>Community Hotspots</h2>
+
+      Choose your state and county to check out which industries are active in your community. See which create the most jobs and which have the biggest environmental impacts.<br><br>
+
+      <a href="../../community/challenge/">Join our Newsletter</a>
+      
+      <br><br>
+      </div>
+    </div>
+
+    <div class="pageColumn">
+      <div class="pageColumnInside">
+
+      <h2>$10,000 in Awards</h2>
+      Code for America and the US Environmental Protection Agency (EPA) are awarding programmers, community reps and designers who help create inspiring tools.<br><br>
+
+      <a href="../../community/projects/">View project teams</a>
+
+      </div>
+    </div>
+
+    <div class="pageColumn">
+      <div class="pageColumnInside">
+        <h2>Register to Participate</h2>
+
+        We're teaming up with sustainablity experts, coders and designers around the world to integrate systems in location-focused community impact portals.<br><br>
+
+        <a href="../../community/challenge/" target="_parent">Learn more and register</a>
+
+      </div>
+    </div>
+
+    
+
+
+    
+
+  </div>
+
+</div>
+
+<div id="readmeDiv"></div>
+
+
 <script>
+  //loadMarkdown("../../community/challenge/README.md", "readmeDiv", "_parent");
+
   // Within localhost.js the state menu is moved into the hero image area by the following:
   // relocatedStateMenu.appendChild(state_select);
 
