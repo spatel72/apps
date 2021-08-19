@@ -1,3 +1,5 @@
 # Model Earth - Local Site Apps
 
-[Get Started](https://model.earth/localsite/start/)
+Also fork or clone the [localsite repo](https://github.com/modelearth/localsite) and place in the same webroot as the apps repo.  
+
+[Getting Started with local site development](https://model.earth/localsite/start/)
