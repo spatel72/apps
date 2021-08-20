@@ -12,7 +12,7 @@
 <script type="text/javascript" src="../../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
 
 <!-- Set custom parameters here -->
-<script type="text/javascript" src="../../localsite/js/localsite.js?display=everything&lat=37&lon=-95.7&indicators=ENRG,JOBS,VADD,WATR"></script>
+<script type="text/javascript" src="../../localsite/js/localsite.js?display=everything&lat=37&lon=-95.7&set=air&indicators=GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS,ENRG,JOBS,VADD,WATR"></script>
 
 
 <style>
@@ -65,7 +65,7 @@
 
 <body>
 
-<div id="hero-landscape-image" class="bgimg" style="z-index:-1; min-height: 500px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
+<div id="hero-landscape-image" class="bgimg" style="z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
 </div>
 
 
@@ -94,6 +94,7 @@
   <div id="hero-rect-new" style="max-width: 680px; float:left">
     <!--Later: Choose two states to compare.-->
     <div style="font-size:22px; margin-bottom:10px; font-weight:400">Choose a state</div>
+    Find out where your state (and county) ranks in combating climate change.<br>
     <div id="relocatedStateMenu"></div><br>
     
     <div id="dataHeader"></div>
@@ -105,7 +106,20 @@
 
     <div id="about-profile" style="display:none">
 
-      Find out where your state ranks in combating climate change.
+      <b>Challenge Statement:</b><br>
+      How does my company, school, city and state achieve net zero carbon emissions?<br><br>
+
+      <a href="BeyondCarbon.org">State ranking data from Bloomberg’s BeyondCarbon.org</a> - 
+      "Climate scientists have said that in order to avoid the worst possible outcomes, we must decarbonize our entire global economy by mid-century. In order to move the United States toward a 100 percent clean energy economy we must:"
+
+      <ul>
+        <li>Transition to 100% clean power</li>
+        <li>Replace oil burning cars and trucks with electric vehicles</li>
+        <li>Eliminate building emissions</li>
+        <li>Modernize industry and infrastructure</li>
+      </ul>
+
+
 
     </div>
 
@@ -120,6 +134,7 @@
 
 <div id="readmeDiv"></div>
 
+<br><br><br>
 
 <script>
   //loadMarkdown("../../community/challenge/README.md", "readmeDiv", "_parent");
