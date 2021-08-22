@@ -1,0 +1,45 @@
+
+/* Format beyond carbon state data table */
+#state_select {
+  font-size: 24px;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.state-table {
+  width: 100vw;
+  margin-bottom: 0;
+  display:nonetable;
+  background-color:#eee;
+}
+.state-table-data {
+  display: table-cell;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+  padding: 30px 50px 30px 0px;
+  text-align:left;
+  border-bottom: solid lightgrey 1px;
+  border-right: solid lightgrey 1px; 
+}
+#resultsTable td {
+  border-bottom: 1px solid #777;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#resultsTable {
+  margin-bottom: 8px;
+}
+#hero-landscape-image {
+  background-image: url(/community/img/hero/hero.png);
+
+  position:absolute;
+  z-index: 100;
+}
+.hero-text {
+  float:left;
+  color:#fff;
+  text-shadow: 2px 2px 8px #111;
+  padding-right:80px;
+  font-weight:800;
+}
