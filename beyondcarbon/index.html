@@ -18,6 +18,10 @@
 <!-- Interactive state menu - Display beyond carbon table -->
 <script type="text/javascript" src="../js/bc.js" id="/apps/js/bc.js"></script>
 
+<script>
+  loadMarkdown("README.md", "readmeDiv", "_parent");
+</script>
+
 </head>
 
 
@@ -56,9 +60,10 @@
   <div id="hero-rect-new" style="max-width: 680px; float:left">
     <!--Later: Choose two states to compare.-->
     <div style="font-size:22px; margin-bottom:10px; font-weight:400">Choose a state</div>
-    Find out where your state (and county) ranks in combating climate change.<br>
+
     <div id="relocatedStateMenu"></div><br>
-    
+    Find out where your state ranks in combating climate change.<br><br>
+
     <div id="dataHeader"></div>
     <div id="dataDisplay"></div>
 
@@ -67,9 +72,6 @@
     </div>
 
     <div id="about-profile" style="display:none">
-
-      <b>Challenge Statement:</b><br>
-      How does my company, school, city and state achieve net zero carbon emissions?<br><br>
 
       <a href="https://BeyondCarbon.org">State ranking data from Bloomberg’s BeyondCarbon.org</a> - 
       "Climate scientists have said that in order to avoid the worst possible outcomes, we must decarbonize our entire global economy by mid-century. In order to move the United States toward a 100% clean energy economy we must:"
@@ -94,9 +96,14 @@
 <div style="clear:both">
 </div>
 
-<div id="readmeDiv"></div>
+
 
 <br><br><br>
+
+<div class="content contentpadding" style="margin-bottom:0px; padding-bottom:0px">
+  <div id="readmeDiv"></div>
+</div>
+<hr><br>
 
 </body>
 </html>
