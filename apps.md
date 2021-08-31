@@ -1,6 +1,6 @@
 [Base](base/) - Starter folder  
-[Beyond Carbon](beyondcarbon/) - Combing Bloomberg and EPA data  
-[Brigade Map](brigades/) - Combing Code for America and EPA data  
+[Beyond Carbon](beyondcarbon/) - Combining Bloomberg and EPA data  
+[Brigade Map](brigades/) - Combining Code for America and EPA data  
 [Coastal Recycling](coastal/) - Southeast Georgia Team  
 [EV Manufacturing](ev/) - LaGrange Georgia Team  
 
