@@ -10,6 +10,22 @@
 <script type="text/javascript" src="../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
 <script type="text/javascript" src="../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
 
+<script>
+  if(typeof param == 'undefined') {
+    var param = {};
+  }
+  if (location.host.indexOf("georgia.org" || 
+    (location.host.indexOf('localhost') >= 0 && navigator && navigator.brave) >= 0)) {
+    param.state = "GA";
+  } else {
+    param.state = "NY";
+  }
+</script>
+
+<script type="text/javascript" src="../localsite/js/localsite.js?indicators=ENRG,JOBS,NNRG,RNRG,VADD&display=everything&state=GA"></script>
+
+
+
 <style>
 .bgimg {
   min-height: 600px;
@@ -43,7 +59,7 @@
     <b>Create a Community App Page</b>
     - Get started by <a href="https://github.com/modelearth/localsite/">forking the localsite repo</a> and the <a href="https://github.com/modelearth/apps/">apps repo</a>. You can copy the apps <a href="base/">base folder</a> or update an existing apps folder. View your work <a href="../localsite/start/">locally</a>.  Share your updates on GitHub and submit a pull request (PR) for us to merge back into the main apps repo.<br><br>
 
-    <b>App Development</b>
+    <b>Community Pages</b>
     <div id="readmeDiv"></div>
 
     <div id="parsedOutput"></div>
@@ -51,8 +67,6 @@
   </div>
 
 </div>
-
-<script type="text/javascript" src="../localsite/js/localsite.js?state=NY&indicators=ENRG,JOBS,NNRG,RNRG,VADD&display=everything"></script>
 
 </body>
 </html>
