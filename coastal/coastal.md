@@ -10,6 +10,10 @@ Waste 2 Solutions and Free Clean Energy are working with HL Daniel on a proposal
 
 - [Waste 2 Solutions](http://waste2solutions.net)  
 - [Free Clean Energy](../../?partner=freeclean)  
+
+
+Brunswick-based Pinova owned by French [DRT](https://www.drt.fr/en/) - supplies of perfume, adhesive, rubber, ink and food supplements.
+https://www.pinovasolutions.com/our-heritage
 -->
 
 
