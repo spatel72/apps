@@ -12,15 +12,18 @@
 <script type="text/javascript" src="../../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
 <script type="text/javascript" src="../../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
 
-<script type="text/javascript" src="../../localsite/js/localsite.js?display=everything&state=CA&lat=37&lon=-95.7&set=air&indicators=GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS,ENRG,JOBS,VADD,WATR"></script>
-
 <!-- Set custom app values -->
 <script>
+  var param = {};
   param.startTitle = "US EPA"
   param.headerLogo = "<img src='img/epa-header-logo.png' style='width:280px'>";
-
+  param.state = "CO"
   loadMarkdown("README.md", "readmeDiv", "_parent");
 </script>
+
+<script type="text/javascript" src="../../localsite/js/localsite.js?display=everything&lat=37&lon=-95.7&set=air&indicators=GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS,ENRG,JOBS,VADD,WATR"></script>
+
+
 
 <!-- Interactive state menu - Display beyond carbon table -->
 <!--
