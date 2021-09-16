@@ -189,7 +189,12 @@
 
   <div id="tabulator-lca-input"></div>
   <div style="margin-top:8px; margin-bottom:25px">
-   <div style="float:left">Upload / Download File</div>
+   <button id="add-row" style="float:left; margin-right:4px">Add Row</button>
+   <button id="download-csv" style="float:left; margin-right:4px">Download CSV</button>
+   <button id="download-json" style="float:left; margin-right:4px">Download JSON</button>
+   <!--
+   <div style="float:left">Upload File</div>
+    -->
    <div style="float:right; font-size: 11px">Click table cells to edit</div>
   </div>
 
@@ -243,7 +248,17 @@ var table = new Tabulator("#tabulator-lca-input", {
     // Within OpenLCA title appears as:
     // Avoided was...
 });
+document.getElementById("add-row").addEventListener("click", function(){
+    table.addRow({});
+});
+document.getElementById("download-csv").addEventListener("click", function(){
+    table.download("csv", "data.csv");
+});
+document.getElementById("download-json").addEventListener("click", function(){
+    table.download("json", "data.json");
+});
 
+/// Output table
 var tableout = [
     {id:1, name:"My Project", category:"", amount:230000, unit:"USD", costs:202000, uncertainty:"none", provider:""},
 ];
