@@ -66,6 +66,47 @@
     cursor: pointer;
   }
 
+  .envProfile {
+    max-width:320px;
+    width:100%;
+    border:1px solid #ccc;
+    padding:20px;
+    float:left;
+    margin-right:20px;
+    margin-bottom:30px;
+  }
+  .envProfile div {
+    padding: 4px 6px 3px 6px;
+    font-size: 13px;
+    border-bottom: 1px solid #333;
+  }
+  .envProfile div span {
+    float: right;
+    font-weight: bold;
+  }
+  .envProfile div div {
+    margin-left: 20px;
+    border: 0px;
+    padding: 0px;
+  }
+  .envProfile div div span {
+    float: right;
+    font-weight: bold;
+  }
+  .envProfile .profileTitle {
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 0px;
+    font-weight: 800;
+    font-family: 'Roboto', helvetica;
+    border-bottom: 6px solid #333;
+  }
+  .envProfile .profileType {
+    font-size: 12px;
+    padding: 5px;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #333;
+  }
 </style>
 
 <!-- State image refreshed by localsite/js/map-filters.js -->
@@ -292,6 +333,55 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
     },
 });
 </script>
+
+<div class="content contentpadding">
+<h1>Resulting Environmental Profiles (MockUp)</h1>
+To be compared with averages for industry and location.<br><br>
+
+
+  <div class="envProfile">
+    <div class="profileType">Community/Region Profile</div>
+    <div class="profileTitle regiontitle"></div>
+    <div><b>Counties:</b> <div class="counties_title"></div></div>
+  </div>
+
+  <div class="envProfile">
+    <div class="profileType">Product Profile</div>
+    <div class="profileTitle">ReadyMix Concrete Y</div>
+    <div><b>Amount Per:</b><br>1 m<sub>3</sub> of 10,000 psi concrete at&nbsp;28&nbsp;days</div>
+    <div><b>Global Warming Potential</b> (kg CO<sub>2</sub> eq) 
+      <span><b>445</b></span>
+      <div>Emitted <span>&nbsp; &nbsp;<b>460</b></span></div>
+      <div>Sequestered <span>&nbsp; &nbsp;<b>-15</b></span></div>
+    </div>
+    <div><b>Ozone Depletion</b> (kg CFC 11 eq) 
+      <span><b>0.000</b></span>
+    </div>
+    <div><b>Acidification</b> (kg SO<sub>2</sub> eq) 
+      <span><b>2.96</b></span>
+    </div>
+    <div><b>Eutrophication</b> (kg N eq) 
+      <span><b>0.09</b></span>
+    </div>
+    <div><b>Smog Formation</b> (kg O<sub>3</sub> eq) 
+      <span><b>0.61</b></span>
+    </div>
+    <div><b>Primary Energy Demand</b> (Mj) 
+      <span><b>3017</b></span>
+      <div>Non-renewable <span>&nbsp; &nbsp;<b>3000</b></span></div>
+      <div>Renewable <span>&nbsp; &nbsp;<b>17</b></span></div>
+    </div>
+  </div>
+
+  <div class="envProfile" style="margin-bottom: 15px">
+    <div class="profileType">Individual Footprint</div>
+    <div class="profileTitle">Individual Z</div>
+    <div><b>Monthly Commute</b> (miles) <span>210</span></div>
+  </div>
+
+</div>
+<hr style="clear:both">
+
 
 </body>
 </html>
