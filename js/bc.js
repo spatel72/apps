@@ -25,7 +25,7 @@ $(document).ready(function() {
 var stateDataset = [];
 function loadHtmlTable(applyFilter) {
   //alert("loading")
-  d3.text("5_22-data-06_06.csv").then(function(data) {
+  d3.text("/apps/beyondcarbon/5_22-data-06_06.csv").then(function(data) {
       stateDataset = d3.csvParseRows(data);
       console.log("loadHtmlTable - stateDataset row count: " + stateDataset.length);
       //alert(stateDataset);

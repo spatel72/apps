@@ -1,7 +1,7 @@
 
 /* Format beyond carbon state data table */
 #state_select, .bigselect {
-  font-size: 24px;
+  font-size: 18px;
   width:100%;
   max-width: 500px;
   padding: 5px;
@@ -43,4 +43,13 @@
   text-shadow: 2px 2px 8px #111;
   padding-right:80px;
   font-weight:800;
+}
+#hero-rect-new {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  margin: 0 auto; /* We'll center instead */
+  max-width: 600px;
+  padding: 20px 50px 20px 50px;
+  overflow: auto;
+  float: left;
 }
