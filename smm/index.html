@@ -16,8 +16,10 @@
 <script>
   var param = {};
   param.startTitle = "US EPA"
-  param.headerLogo = "<img src='img/epa-header-logo.png' style='width:280px'>";
+  param.headerLogo = "<img src='img/epa-header-logo.png' style='width:280px'>"
   param.state = "CO"
+  param.sector = "327310"
+
   loadMarkdown("README.md", "readmeDiv", "_parent");
 </script>
 
@@ -224,10 +226,19 @@
 
 <div class="content contentpadding">
 
-<!-- Click USEEIO V3.0 to toggle to prior versions. 
+<!-- Click USEEIO V3.0 below to toggle to prior versions. 
+
+Show the year by each version (hence year is not needed in settings)
+
+v1.2 2007 - IO data year and final demand year 
+v2.0 2012 - IO data year and final demand year 
+
+Environmental data from each model are more updated – see the original docs for v1 for instance on env data years
+
+Perspective is a way of grouping the calculation results. It is not used in the IO chart.
 
 -->
-<div style="float:right; font-size:11px">USEEIO V3.0</div>
+<div style="float:right; font-size:11px">USEEIO V3.0 <i class="material-icons" style="font-size: 18px; cursor: pointer; display: inline-block; line-height:10px; margin:0px; padding:0px; float: right;"></i></div>
 
 <h1>Environmental Profiles (Under Development)</h1>
 Default profiles could be based on averages for the state and industry.<br><br>
@@ -400,6 +411,57 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
 
 <hr style="clear:both">
 
+<div class="content contentpadding">
+
+  <h1>Cement Manufacturing</h1>
+  NAICS 327310<br><br>
+
+  This industry comprises establishments primarily engaged in manufacturing portland, natural, masonry, pozzolanic, and other hydraulic cements. Cement manufacturing establishments may calcine earths or mine, quarry, manufacture, or purchase lime. (NAICS 2007 descriptions)
+  <br><br>
+
+  <h2>Top Issues</h2>
+
+  <img src="img/cement-issues-1.png" style="width:100%;max-width:800px"><br><br>
+
+  TO DO: Sort the IO Chart by issue intensity. Display totals for one year.<br><br>
+
+  <img src="img/cement-issues-2.png" style="width:100%;max-width:800px"><br><br>
+
+  <h2>Supply Chain vs Operations</h2>
+
+  <img src="img/cement-supply-vs-op.png" style="width:100%;max-width:800px"><br><br>
+  <br>
+
+  NOTE: Bar charts are easier to read and allow quantities to be displayed for printing. 
+  We could default to bar chart displays in the update.<br><br>
+
+  <h2>Direct Inflow for Cement</h2>
+
+  Direct purchases potentially contributing to overall environmental issues<br><br>
+
+  <img src="img/cement-direct-purchases.png" style="width:100%;max-width:800px"><br><br>
+
+  
+
+  <h2>Impacts of Direct Inflow</h2>
+
+  TO DO: Use the IO Chart to display the suppliers contributing to each impact.<br><br>
+
+  <img src="img/cement-impacts-of-purchases.png" style="width:100%;max-width:800px"><br><br>
+
+  <h2>Indirect Inflow for Cement</h2>
+
+  <img src="img/cement-indirect-purchases.png" style="width:100%;max-width:700px"><br><br>
+
+  <h2>Impacts of Indirect Inflow</h2>
+
+  <img src="img/cement-impacts-of-indirect.png" style="width:100%;max-width:750px"><br><br>
+
+  This information represents the life cycle environmental performance of an average provider of Cement in the US. This information is meant to serve as a starting place to help organizations engage in life cycle thinking and action.
+
+</div>
+
+<hr style="clear:both">
 
 </body>
 </html>
