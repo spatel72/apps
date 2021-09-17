@@ -154,15 +154,7 @@
 
     <div style="font-size: 20px; ">
       
-      <div class="introLeft"><input type="checkbox" class="bigcheck" name="optiona" id="opta" /> Organization</div>
-      <div class="introRight">
-        <div class="showApps">
-          <select id="select1" class="bigselect" style="pointer-events:none;">
-            <option value="Goods & Services Provided">Goods & Services provided...</option>
-          </select>
-        </div>
-      </div>
-      <div class="introDivider"></div>
+      
 
       <div class="introLeft"><input type="checkbox" class="bigcheck" name="optionb" id="optb" /> Country</div>
       <div class="introRight">
@@ -176,6 +168,16 @@
       <div class="introRight" id="relocatedStateMenu"></div>
       <div class="introDivider"></div>
 
+      <div class="introLeft"><input type="checkbox" class="bigcheck" name="optiona" id="opta" checked /> Organization</div>
+      <div class="introRight">
+        <div class="showApps">
+          <select id="select1" class="bigselect" style="pointer-events:none;">
+            <option value="Goods & Services Provided">Cement Manufacturing</option>
+          </select>
+        </div>
+      </div>
+      <div class="introDivider"></div>
+
       <div class="introLeft"><input type="checkbox" class="bigcheck" /> Community</div>
       <div class="introRight">
         <div onclick="$('#filterClickLocation').click();return false;">
@@ -186,7 +188,7 @@
       </div>
       <div class="introDivider"></div>
 
-      <div class="introLeft"><input type="checkbox" class="bigcheck" /> Family</div>
+      <div class="introLeft"><input type="checkbox" class="bigcheck" checked /> Family</div>
       <div class="introRight">
         <select id="family_count_select" class="bigselect">
           <option value="">How far do you commute?</option>
@@ -251,8 +253,8 @@ Default profiles could be based on averages for the state and industry.<br><br>
   </div>
 
   <div class="envProfile">
-    <div class="profileType">Industry Profile</div>
-    <div class="profileTitle">Cement</div>
+    <div class="profileType">Organization Profile</div>
+    <div class="profileTitle">Cement Manufacturing</div>
     <div><b>Amount Per:</b><br>1 m<sub>3</sub> of 10,000 psi concrete at&nbsp;28&nbsp;days</div>
     <div><b>Global Warming Potential</b> (kg CO<sub>2</sub> eq) 
       <span><b>445</b></span>
@@ -279,8 +281,8 @@ Default profiles could be based on averages for the state and industry.<br><br>
   </div>
 
   <div class="envProfile" style="margin-bottom: 15px">
-    <div class="profileType">Individual Footprint</div>
-    <div class="profileTitle">Individual Z</div>
+    <div class="profileType">Family Footprint</div>
+    <div class="profileTitle">My Family</div>
     <div><b>Monthly Commute</b> (miles) <span>210</span></div>
   </div>
 
@@ -416,7 +418,7 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
   <h1>Cement Manufacturing</h1>
   NAICS 327310<br><br>
 
-  This industry comprises establishments primarily engaged in manufacturing portland, natural, masonry, pozzolanic, and other hydraulic cements. Cement manufacturing establishments may calcine earths or mine, quarry, manufacture, or purchase lime. (NAICS 2007 descriptions)
+  This industry comprises establishments primarily engaged in manufacturing portland, natural, masonry, pozzolanic, and other hydraulic cements. Cement manufacturing establishments may calcine earths or mine, quarry, manufacture, or purchase lime. (NAICS 2007 description)
   <br><br>
 
   <h2>Top Issues</h2>
@@ -453,7 +455,7 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
 
   <img src="img/cement-indirect-purchases.png" style="width:100%;max-width:700px"><br><br>
 
-  <h2>Impacts of Indirect Inflow</h2>
+  <h2>Impacts of Indirect Inflow for Cement</h2>
 
   <img src="img/cement-impacts-of-indirect.png" style="width:100%;max-width:750px"><br><br>
 
