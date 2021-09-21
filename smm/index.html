@@ -467,11 +467,38 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
 
   This information represents the life cycle environmental performance of an average provider of Cement in the US. This information is meant to serve as a starting place to help organizations engage in life cycle thinking and action.<br><br>
 
+
+  <style>
+    .scopeCol {
+      float:left;
+      margin-right:40px;
+    }
+    .scopeCol {
+      font-size: 18px;
+      font-weight: 200;
+    }
+  </style>
   Alternative way to present the Supply Chain <b>Upstream-Commodites-Downstream</b> columns below by shifting commodities (operations) to the right&nbsp;column:<br><br>
 
-  <div style="border:1px solid #ccc; padding:10px 20px 10px 20px">
-    <h2>Value Chain</h2>
-    Scope 3 (indirect before purchases) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Scope 2 (indirect from purchases) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Scope 1 (direct emissions from owned or controlled sources)<br><br>
+  <div style="border:1px solid #ccc; padding:10px 20px 10px 20px; display:inline-block;">
+    <h2 style="font-size:30px; font-weight:300">Value Chain</h2>
+
+    <div class="scopeCol">
+    <b>Before Purchases</b><br>
+    Indirect - Scope 3
+    </div>
+
+    <div class="scopeCol">
+    <b>From Purchases</b><br>
+    Indirect - Scope 2
+    </div>
+
+    <div class="scopeCol" style="margin-right: 0px">
+    <b>Direct Emissions</b><br>
+    From owned or controlled sources - Scope 1
+    </div>
+
+    <br><br>
   </div>
 </div>
 
