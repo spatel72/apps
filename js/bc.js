@@ -20,6 +20,8 @@ $(document).ready(function() {
       console.log("theStateName from hashChangeEvent: " + theStateName);
       displayStateData(theStateName);
   }, false);
+
+  loadHtmlTable(true); // New list
 });
 
 var stateDataset = [];
@@ -30,36 +32,38 @@ function loadHtmlTable(applyFilter) {
       console.log("loadHtmlTable - stateDataset row count: " + stateDataset.length);
       //alert(stateDataset);
 
-        let theStateName = $("#state_select").find(":selected").text();
-        //alert("theStateName " + theStateName);
-        setTimeout( function() {
+        let theStateName = "";
+        if (param.state) {
           theStateName = $("#state_select").find(":selected").text();
-          if(!theStateName) { // Hack. We need to instead trigger when #state_select menu becomes available.
-            //theStateName = "Georgia"
-          }
-          displayStateData(theStateName);
-        }, 1000 ); // Allow time for state dropdown to load.
+          //alert("theStateName " + theStateName);
+          setTimeout( function() {
+            theStateName = $("#state_select").find(":selected").text();
+            if(!theStateName) { // Hack. We need to instead trigger when #state_select menu becomes available.
+              //theStateName = "Georgia"
+            }
+            displayStateData(theStateName);
+          }, 1000 ); // Allow time for state dropdown to load.
+        }
   });
 }
-
-//setTimeout( function() {
-  loadHtmlTable(true); // New list
-//}, 1000 ); // Allow time for state dropdown to load.
 
 function statePhrase(stateRow, rowIndex, theStateName) {
   return(stateRow[rowIndex].replace("[XX]" || "[XX's]", theStateName) )
 }
 function displayStateData(theStateName) {
   console.log("displayStateData: " + theStateName);
-  if (theStateName.length == 0) {
+  if (theStateName.length <= 0) {
     //alert("test")
     $("#about-profile").show();
     $("#choose-counties").hide();
     $("#dataDisplay").hide();
     return;
+  } else {
+    $("#choose-your-state-intro").hide();
+    $("#choose-counties").show();
   }
   $("#about-profile").hide();
-  $("#choose-counties").show();
+  
   $("#dataDisplay").show();
 
   let rowcount = 0;
