@@ -1,8 +1,6 @@
-[Base](base/) - Starter folder (Copy to create your community page)  
+[Base Starter Folder](base/) - Copy to create your community page  
 [Beyond Carbon](beyondcarbon/) - Combining Wikipedia, Bloomberg and EPA data  
 [Brigade Map](brigades/) - Combining Code for America and EPA data  
 [Coastal Recycling](coastal/) - Southeast Georgia Team - Activated Carbon  
 [EV Manufacturing](ev/) - LaGrange Georgia Team - Automotive Industries 
 [SMM and LCA Mockup](smm/) - Concepts for USEEIO 3.0 widgets
-
-[About Challenge](../community/challenge/) | [Local Site Setup](../localsite/start/)

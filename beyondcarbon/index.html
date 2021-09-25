@@ -35,11 +35,12 @@
 <body>
 
 <!-- State image refreshed by localsite/js/map-filters.js -->
+<div id="hero_holder">
 <div id="hero-landscape-image" class="bgimg" style="z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
 </div>
 
 
-<div class="content contentpadding" style="padding-top:60px">
+<div class="content contentpadding" style="min-height: 550px; padding-top:60px">
   <div class="hero-text">
 
     <!--
@@ -57,7 +58,7 @@
 
       <div style="font-size:18px;">
       10am ET - EPA Hackahon<br>
-      5pm ET - Awards Ceremony<br>
+      4-6pm ET - Presentations<br>
       <br>
 
       <a href="../../community/challenge/" class="btn btn-primary" style="text-shadow: none; border:2px solid #ddd">Join the Challenge</a><br> 
@@ -69,7 +70,7 @@
 
   <div id="hero-rect-new" style="max-width: 680px; float:left">
     <!--Later: Choose two states to compare.-->
-    <div style="font-size:22px; margin-bottom:10px; font-weight:400">Choose a state</div>
+    <div style="font-size:22px; margin-bottom:10px; font-weight:400">What's your impact?</div>
 
     <div id="relocatedStateMenu"></div><br>
     <!--
@@ -78,6 +79,9 @@
     <div id="dataHeader"></div>
     <div id="dataDisplay"></div>
 
+    <div id="choose-your-state-intro">
+      Choose a state to view its impacts and initiatives.<br>
+    </div>
     <div id="choose-counties" style="display:none">
       <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select one or more counties</a><br>
     </div>
@@ -101,13 +105,11 @@
   </div>
 
 </div>
-
-
+</div>
 
 <div style="clear:both">
 </div>
 
-<br><br><br><br><br><br><br><br><br>
 <!--
 <div class="content contentpadding" style="margin-bottom:0px; padding-bottom:0px">
   <div id="readmeDiv"></div>

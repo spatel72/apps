@@ -14,7 +14,7 @@
 
 <!-- Set custom app values -->
 <script>
-  var param = {};
+  if(typeof param=='undefined'){ var param={}; }
   param.startTitle = "US EPA"
   param.headerLogo = "<img src='img/epa-header-logo.png' style='width:280px'>"
   param.state = "CO"
@@ -117,27 +117,28 @@
 </style>
 
 <!-- State image refreshed by localsite/js/map-filters.js -->
+<div id="hero_holder">
 <div id="hero-landscape-image" class="bgimg" style="z-index:-1; min-height: 600px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
 </div>
 
 
-<div class="content contentpadding" style="padding-top:60px">
+<div class="content contentpadding displayOnload" style="display: none; padding-top:60px; min-height:600px">
   <div class="hero-text">
 
     <a href="../../community/projects/" class="btn btn-danger" style="text-shadow: none; border:2px solid #ddd; border-radius: 0rem;">USEEIO 3.0 MockUp</a><br>
 
-    <div style="font-size:40px; line-height: 1.1em; font-weight:800">Sustainable<br>Material<br>Management</div><br>
-    <div style="font-size:22px; line-height: 1.2em; font-weight:400">
-      Identify potential hotspots<br>in your supply chain.
+    <div style="font-size:40px; line-height: 1.1em; font-weight:800">Lifecycle<br>Tools</div><br>
+    <div style="font-size:22px; line-height: 1.2em; font-weight:800">
+      Identify potential hotspots<br>in your purchases and output.
     </div><br>
 
     <div style="font-size:20px; line-height: 1.2em;">
       <br>
 
-      <div style="font-size:17px; max-width:260px">
+      <div style="font-size:17px; max-width:260px; font-weight:800">
 
-        Most of this mockup is not yet active. 
-        <a href="../../io/team/" style="color:#b9da79; text-decoration:underline;">Share your ideas</a> to&nbsp;help us create web interfaces for SMM and Life Cycle Analysis.<br>
+        This is mockup only.<br> 
+        <a href="../../io/team/" style="color:#b9da79; text-decoration:underline;">Share your ideas</a> to&nbsp;help us create web interfaces for<br>Life Cycle Analysis.<br>
 
 
       </div>
@@ -151,16 +152,18 @@
 
     <div style="font-size:20px; margin-top:14px; margin-bottom:18px; font-weight:800">
 
+      <!--
       <h1 style="font-size:28px">Learn how you can improve your&nbsp;impact</h1>
-      <!--I'm interested in creating-->
       Generate an environmental profile for your....
+      -->
+
+      <h1 style="font-size:24px">Generate an environmental profile for your....</h1>
+
     </div>
     
 
     <div style="font-size: 20px; ">
       
-      
-
       <div class="introLeft"><input type="checkbox" class="bigcheck" name="optionb" id="optb" /> Country</div>
       <div class="introRight">
         <select id="select2" class="bigselect">
@@ -203,6 +206,7 @@
 
       <div style="float:left; font-size:13px; margin-top:10px">
         Choose more than one to&nbsp;compare.<br>
+        (Not yet active)
       </div>
       <div style="float:right">
         <a href="#mockup" style="text-shadow: none; border:2px solid #ddd; width:200px;" class="btn btn-success">Continue</a>
@@ -217,7 +221,7 @@
   </div>
 
 </div>
-
+</div>
 
 
 <div style="clear:both">
@@ -225,7 +229,6 @@
 
 <div id="mockup"></div>
 
-<br><br><br><br><br><br>
 
 <div class="content contentpadding" style="padding-bottom: 0px">
   <div id="readmeDiv"></div>
@@ -311,6 +314,7 @@ More about <a href="../../io/template/">YAML EPD Templates</a><br><br>
   General Information | <span style="font-weight: bold">Inputs/Outputs</span> | Administrative  | Modeling | Parameters | Social Aspects | Impact Analysis
   <hr>
 
+  <select style="float:right" style="font-size:14px !important;"><option>Annually</option></select>
   <h3 style="padding-top:0px; margin-top:0px;">Your Inputs</h3>
 
   <div id="tabulator-lca-input"></div>
@@ -326,6 +330,7 @@ More about <a href="../../io/template/">YAML EPD Templates</a><br><br>
 
   <br><br>
 
+  <select style="float:right" style="font-size:14px !important;"><option>Annually</option></select>
   <h3 style="padding-top:0px; margin-top:0px;">Your Outputs</h3>
   <div id="tabulator-lca-output"></div>
 
@@ -483,23 +488,42 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
   <div style="border:1px solid #ccc; padding:10px 20px 10px 20px; display:inline-block;">
     <h2 style="font-size:30px; font-weight:300">Value Chain</h2>
 
-    <div class="scopeCol">
-    <b>Before Purchases</b><br>
-    Indirect - Scope 3
-    </div>
+    <div style="float:left; margin-right:30px">
+      <div style="border-bottom:1px solid #ccc">Inflow</div>
+      <div class="scopeCol">
+      
+      <b>Before Purchases</b><br>
+      Indirect - Scope 3
+      </div>
 
-    <div class="scopeCol">
-    <b>From Purchases</b><br>
-    Indirect - Scope 2
+      <div class="scopeCol">
+      <b>From Purchases</b><br>
+      Indirect - Scope 2
+      </div>
     </div>
 
     <div class="scopeCol" style="margin-right: 0px">
+    <div style="border-bottom:1px solid #ccc">Outflow</div>
     <b>Direct Emissions</b><br>
     From owned or controlled sources - Scope 1
     </div>
 
     <br><br>
   </div>
+</div>
+
+<hr style="clear:both">
+
+<div class="content contentpadding">
+    <h3>One indicator across multiple commodities</h3>
+
+    Great layout for comparison with a baseline. 
+    See our related <a href="../../community/biotech/">Deaggregation of Stage 2 Biofuels</a>.<br><br>
+
+      <a href="../../community/projects/flight/img/alternative-aviation-fuel-sustainability-fig-mar2021.png"><img src="../../community/projects/flight/img/alternative-aviation-fuel-sustainability-fig-mar2021.png" style="width:100%"></a><br>
+      <div style="margin-left:27px">
+        Source: <a href="https://theicct.org/publications/alternative-aviation-fuel-sustainability-mar2021">Assessing the sustainability implications of alternative aviation fuels</a>
+      </div>
 </div>
 
 <hr style="clear:both">

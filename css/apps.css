@@ -45,7 +45,7 @@
   font-weight:800;
 }
 #hero-rect-new {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 40px;
   margin: 0 auto; /* We'll center instead */
   max-width: 600px;

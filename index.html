@@ -11,62 +11,60 @@
 <script type="text/javascript" src="../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
 
 <script>
-  if(typeof param == 'undefined') {
-    var param = {};
-  }
-  if (location.host.indexOf("georgia.org" || 
-    (location.host.indexOf('localhost') >= 0 && navigator && navigator.brave) >= 0)) {
-    param.state = "GA";
-  } else {
-    param.state = "NY";
-  }
+  if(typeof param=='undefined'){ var param={}; }
+  //param.state = "SD"
+  param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS,ENRG,WATR"
 </script>
 
-<script type="text/javascript" src="../localsite/js/localsite.js?indicators=ENRG,JOBS,NNRG,RNRG,VADD&display=everything&state=GA"></script>
+<script type="text/javascript" src="../localsite/js/localsite.js?display=everything"></script>
 
 
 <script>
   loadMarkdown("apps.md", "readmeDiv", "_parent");
 </script>
 
-<style>
-.bgimg {
-  min-height: 600px;
-}
-#state_select {
-  font-size: 24px;
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 20px;
-}
-</style>
-
-
 
 </head>
 
 <body>
 
-<div id="hero-landscape-image" class="bgimg" style="background-position: 0 54px;">
+<style>
+.bgimg {
+  min-height: 600px;
+}
+#hero-rect {
+  background-color: rgba(255, 255, 255, 1);
+}
+#hero-rect:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.bgimg {
+  background-image: url(https://model.earth/us-states/images/backgrounds/1280x720/landscape/south-dakota.jpg);
+}
+</style>
 
-  <div id="hero-rect">
-    <!--Later: Choose two states to compare.-->
-    <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a State</div>
+<div id="hero_holder">
+<div id="hero-landscape-image" class="bgimg displayOnload" style="display: none; background-position: 0 54px;">
+
+  <div id="hero-rect" class="displayOnload" style="display: none;">
+    <h1 style="padding:0px;margin:0px;margin-bottom:15px;font-size:24px">Community Pages</h1>
     <div id="relocatedStateMenu"></div><br>
-    <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
+    <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select counties and regions</a> to view local industry impacts<!--a href="#impact"></a-->
 
     <br><br>
 
-    <b>Create a Community App Page</b>
-    - Get started by <a href="https://github.com/modelearth/localsite/">forking the localsite repo</a> and the <a href="https://github.com/modelearth/apps/">apps repo</a>. You can copy the apps <a href="base/">base folder</a> or update an existing apps folder. View your work <a href="../localsite/start/">locally</a>.  Share your updates on GitHub and submit a pull request (PR) for us to merge back into the main apps repo.<br><br>
-
-    <b>Community Pages</b>
+    
     <div id="readmeDiv"></div>
+
+    <b>Create a Community Page</b> - <a href="../localsite/start/">Setup your local webroot and fork repos</a>, then copy or edit a folder in the apps repo. Deploy your updates using GitHub Desktop. More about creating a <a href="../../community/challenge/how/">winning entry</a>.<br><br>
+
+    <a href="../community/challenge/">About Web Challenge</a> | <a href="../community/tools/">Lifecycle Tools Overview</a>
 
     <div id="parsedOutput"></div>
 
   </div>
 
+</div>
 </div>
 
 </body>
