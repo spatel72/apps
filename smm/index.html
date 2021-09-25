@@ -14,7 +14,7 @@
 
 <!-- Set custom app values -->
 <script>
-  var param = {};
+  if(typeof param=='undefined'){ var param={}; }
   param.startTitle = "US EPA"
   param.headerLogo = "<img src='img/epa-header-logo.png' style='width:280px'>"
   param.state = "CO"
@@ -121,20 +121,20 @@
 </div>
 
 
-<div class="content contentpadding" style="padding-top:60px">
+<div class="content contentpadding" style="padding-top:60px; min-height:600px">
   <div class="hero-text">
 
     <a href="../../community/projects/" class="btn btn-danger" style="text-shadow: none; border:2px solid #ddd; border-radius: 0rem;">USEEIO 3.0 MockUp</a><br>
 
     <div style="font-size:40px; line-height: 1.1em; font-weight:800">Lifecycle<br>Tools</div><br>
-    <div style="font-size:22px; line-height: 1.2em; font-weight:400">
+    <div style="font-size:22px; line-height: 1.2em; font-weight:800">
       Identify potential hotspots<br>in your purchases and output.
     </div><br>
 
     <div style="font-size:20px; line-height: 1.2em;">
       <br>
 
-      <div style="font-size:17px; max-width:260px">
+      <div style="font-size:17px; max-width:260px; font-weight:800">
 
         This is mockup only.<br> 
         <a href="../../io/team/" style="color:#b9da79; text-decoration:underline;">Share your ideas</a> to&nbsp;help us create web interfaces for<br>Life Cycle Analysis.<br>
@@ -151,9 +151,13 @@
 
     <div style="font-size:20px; margin-top:14px; margin-bottom:18px; font-weight:800">
 
+      <!--
       <h1 style="font-size:28px">Learn how you can improve your&nbsp;impact</h1>
-      <!--I'm interested in creating-->
       Generate an environmental profile for your....
+      -->
+
+      <h1 style="font-size:24px">Generate an environmental profile for your....</h1>
+
     </div>
     
 
@@ -201,6 +205,7 @@
 
       <div style="float:left; font-size:13px; margin-top:10px">
         Choose more than one to&nbsp;compare.<br>
+        (Not yet active)
       </div>
       <div style="float:right">
         <a href="#mockup" style="text-shadow: none; border:2px solid #ddd; width:200px;" class="btn btn-success">Continue</a>
@@ -223,7 +228,6 @@
 
 <div id="mockup"></div>
 
-<br><br><br><br><br><br>
 
 <div class="content contentpadding" style="padding-bottom: 0px">
   <div id="readmeDiv"></div>
@@ -505,6 +509,20 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
 
     <br><br>
   </div>
+</div>
+
+<hr style="clear:both">
+
+<div class="content contentpadding">
+    <h3>One indicator across multiple commodities</h3>
+
+    Great layout for comparison with a baseline. 
+    See our related <a href="../../community/biotech/">Deaggregation of Stage 2 Biofuels</a>.<br><br>
+
+      <a href="../../community/projects/flight/img/alternative-aviation-fuel-sustainability-fig-mar2021.png"><img src="../../community/projects/flight/img/alternative-aviation-fuel-sustainability-fig-mar2021.png" style="width:100%"></a><br>
+      <div style="margin-left:27px">
+        Source: <a href="https://theicct.org/publications/alternative-aviation-fuel-sustainability-mar2021">Assessing the sustainability implications of alternative aviation fuels</a>
+      </div>
 </div>
 
 <hr style="clear:both">

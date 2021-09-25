@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Base - Starter Template</title>
+<title>Community Site</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 
@@ -17,11 +17,12 @@
 
 <!-- Set custom app values -->
 <script>
-    //param.titleArray = ["Your","Community"]
-    //param.startTitle = "Your Community"
-    //param.headerLogo = "<img src='/apps/smm/img/epa-header-logo.png' style='width:280px'>";
-    //param.headerFile = "header.html"
-    //param.footer = "footer.html"
+  //if(typeof param=='undefined'){ var param={}; }
+  //param.titleArray = ["Your","Community"]
+  //param.startTitle = "Your Community"
+  //param.headerLogo = "<img src='/apps/smm/img/epa-header-logo.png' style='width:280px'>";
+  //param.headerFile = "header.html"
+  //param.footer = "footer.html"
 </script>
 
 <!-- Interactive state menu - Display beyond carbon table -->
@@ -37,12 +38,12 @@
 
 <body>
 
-<!-- State image refreshed by localsite/js/map-filters.js -->
-<div id="hero-landscape-image" class="bgimg" style="z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
+<!-- State image refreshed by localsite/js/map-filters.js. Displayed once base.css loads. -->
+<div id="hero-landscape-image" class="bgimg displayOnload" style="display: none; z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888">
 </div>
 
 
-<div class="content contentpadding" style="padding-top:60px">
+<div class="content contentpadding" style="padding-top:60px; min-height: 550px;">
   <div class="hero-text">
 
     <div style="font-size:60px; line-height: 1em; font-weight:800">Your<br>Community</div><br>
@@ -94,8 +95,6 @@
 
 <div style="clear:both">
 </div>
-
-<br><br><br>
 
 <div class="content contentpadding">
     <div id="dataHeader"></div>
