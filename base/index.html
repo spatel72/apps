@@ -11,7 +11,6 @@
 <script type="text/javascript" src="../../localsite/js/d3.v5.min.js" id="/localsite/js/d3.v5.min.js"></script>
 <script type="text/javascript" src="../../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
 <script type="text/javascript" src="../../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
-<script type="text/javascript" src="../../localsite/js/localsite.js"></script>
 
 <!-- Set custom app values -->
 <script>
@@ -24,16 +23,27 @@
   param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS"
   //param.titleArray = ["Your","Community"]
   //param.startTitle = "Your Community"
-  //param.headerLogo = "<img src='/apps/smm/img/epa-header-logo.png' style='width:280px'>";
-  //param.headerFile = "header.html"
-  //param.footer = "footer.html"
+  //param.headerLogo = "<img src='/apps/smm/img/epa-header-logo.png' style='width:280px'>"; // Overrides headerLogoSmall 
   param.headerLogoSmall = "<img src='/apps/img/logo/favicon.png' style='width:70px'>"
+  param.favicon = "/apps/img/logo/favicon.png"
 
-  // Not working
-  // param.favicon = "/apps/img/logo/favicon.png"
+  /*
+  Sources of HTML Formatting loaded by localsite.js
+
+  1. Location (state, county) filter layout resides in:
+  /localsite/map/index.html
+
+  2. USEEIO widget HTML layout resides in:
+  /localsite/info/info-template.html
+
+  3. Navigation is loaded by js/navigation.js, which loads:
+  /localsite/header.html (includes left and right navigation)
+  footer.html
+  */
+
 </script>
 
-
+<script type="text/javascript" src="../../localsite/js/localsite.js"></script>
 
 
 <script>

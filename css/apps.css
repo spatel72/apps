@@ -1,11 +1,15 @@
 
 /* Format beyond carbon state data table */
-#state_select, .bigselect {
-  font-size: 18px;
+#lifecycle_selects #state_select, .bigselect {
+  font-size: 18px !important;
   width:100%;
   max-width: 500px;
   padding: 5px;
   border-radius: 10px;
+
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 20px;
 }
 .state-table {
   width: 100vw;
