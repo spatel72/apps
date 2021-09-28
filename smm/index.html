@@ -162,7 +162,7 @@
     </div>
     
 
-    <div style="font-size: 20px; ">
+    <div id="lifecycle_selects" style="font-size: 20px;">
       
       <div class="introLeft"><input type="checkbox" class="bigcheck" name="optionb" id="optb" /> Country</div>
       <div class="introRight">
@@ -190,7 +190,7 @@
       <div class="introRight">
         <div onclick="$('#filterClickLocation').click();return false;">
         <select id="" class="bigselect" style="pointer-events:none;">
-          <option value="">One or more counties...</option>
+          <option value="">Counties or zip codes...</option>
         </select>
         </div>
       </div>
@@ -254,7 +254,7 @@ Perspective is a way of grouping the calculation results. It is not used in the 
 
 <h1>Environmental Profiles (Under Development)</h1>
 Default profiles could be based on averages for the state and industry. 
-More about <a href="../../io/template/">YAML EPD Templates</a><br><br>
+More about <a href="../../io/template/">YAML EPD Templates</a> / <a href="https://zctaimpacts.abrie.dev/">React Dev</a> (<a href="https://github.com/abrie/zctaimpacts">Git</a>)<br><br>
 
 
   <div class="envProfile">
@@ -314,7 +314,7 @@ More about <a href="../../io/template/">YAML EPD Templates</a><br><br>
   General Information | <span style="font-weight: bold">Inputs/Outputs</span> | Administrative  | Modeling | Parameters | Social Aspects | Impact Analysis
   <hr>
 
-  <select style="float:right" style="font-size:14px !important;"><option>Annually</option></select>
+  <select style="float:right" style="font-size:14px !important;"><option>Annually</option><option>Quarterly</option></select>
   <h3 style="padding-top:0px; margin-top:0px;">Your Inputs</h3>
 
   <div id="tabulator-lca-input"></div>
@@ -330,7 +330,7 @@ More about <a href="../../io/template/">YAML EPD Templates</a><br><br>
 
   <br><br>
 
-  <select style="float:right" style="font-size:14px !important;"><option>Annually</option></select>
+  <select style="float:right" style="font-size:14px !important;"><option>Annually</option><option>Quarterly</option></select>
   <h3 style="padding-top:0px; margin-top:0px;">Your Outputs</h3>
   <div id="tabulator-lca-output"></div>
 
@@ -426,7 +426,7 @@ var tableOutput = new Tabulator("#tabulator-lca-output", {
   <div class="btn btn-danger" style="text-shadow: none; border:2px solid #ddd; border-radius: 0rem;">
   Sustainable Material Management (SMM) Planning</div>
 
-  <h1>Cement Manufacturing</h1>
+  <h1 style="font-weight:600;">Cement Manufacturing</h1>
   NAICS 327310<br><br>
 
   This industry comprises establishments primarily engaged in manufacturing portland, natural, masonry, pozzolanic, and other hydraulic cements. Cement manufacturing establishments may calcine earths or mine, quarry, manufacture, or purchase lime. (NAICS 2007 description)
