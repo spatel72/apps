@@ -36,8 +36,6 @@
   margin-bottom: 8px;
 }
 #hero-landscape-image {
-  background-imageX: url(/community/img/hero/hero.png);
-
   position:absolute;
   z-index: 100;
 }
