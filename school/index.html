@@ -48,6 +48,14 @@ loadMarkdown("README.md", "readmeDiv", "_parent");
   .btn {
     font-weight: 600;
   }
+  #hero-landscape-image-local {
+    background-image: url('img/hero/ses.jpg');
+  }
+  @media (max-width: 800px) {
+    #hero-landscape-image-local {
+      background-image: url('img/hero/ses_square.jpg');
+    }
+  }   
 </style>
 </head>
 
@@ -56,7 +64,7 @@ loadMarkdown("README.md", "readmeDiv", "_parent");
 
 <!-- State image refreshed by localsite/js/map-filters.js. Displayed once base.css loads. -->
 <div id="hero_holder">
-<div id="hero-landscape-image2" class="bgimg" style="z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888; background-image: url('img/hero/ses_square.jpg');">
+<div id="hero-landscape-image-local" class="bgimg" style="z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888;">
 </div>
 
 
