@@ -20,7 +20,21 @@
   param.set = "air"
   param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS"
 
+  heroMenu = {"air":[],"water":[],"land":[],"energy":[],"health":[],"prosperity":[]}
+  heroMenu.air.img = "../img/impact/land/air.jpg"
+  heroMenu.land.img = "../img/impact/land/land.jpg"
+  heroMenu.energy.img = "../img/impact/land/energy.jpg"
   // More params: https://model.earth/localsite
+
+  var menuImages = "";
+  $.each(heroMenu, function (key, val) {
+        //alert(key + val);
+        //alert(heroMenu[key].img);
+        menuImages += "<a href='../img/impact/land/" + key + ".jpg'><img src='../img/impact/land/" + key + ".jpg'></a>";
+  });
+  $(document).ready(function() {
+    $("#menuImages").html(menuImages);
+  });
 </script>
 
 <script type="text/javascript" src="../../localsite/js/localsite.js"></script>
@@ -44,6 +58,13 @@
 <style>
   .btn {
     font-weight: 600;
+  }
+  #menuImages img {
+    width:150px;
+    border:2px solid #fff;
+    float:left;
+    margin-right:8px;
+    margin-bottom: 8px;
   }
 </style>
 </head>
@@ -93,9 +114,9 @@
 
     <div style="clear:both"></div>
     <br><br><br>
-    <a href="../img/impact/land/air.jpg"><img src="../img/impact/land/air.jpg" style="width:150px;border:2px solid #fff"></a><br>
+    <div id="menuImages"></div>
 
-    <div id="insertImpactIcons"></div>
+    <div id="insertImpactIcons" style="clear:both"></div>
 
     
   </div>
