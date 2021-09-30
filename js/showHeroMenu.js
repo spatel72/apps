@@ -1,4 +1,4 @@
-function showHeroMenu(menuType, heroMenu, site) {
+function showImpactMenu(menuType, heroMenu, site) {
     var folder = '';
 
     switch (menuType) {
@@ -19,9 +19,9 @@ function showHeroMenu(menuType, heroMenu, site) {
             break;
     }
 
-    heroMenu.air.img = folder + "air.jpg";
-    heroMenu.land.img = folder + "land.jpg";
-    heroMenu.energy.img = folder + "energy.jpg";
+    //heroMenu.air.img = folder + "air.jpg";
+    //heroMenu.land.img = folder + "land.jpg";
+    //heroMenu.energy.img = folder + "energy.jpg";
 
     var html = [];
     var i = 0;
@@ -35,5 +35,19 @@ function showHeroMenu(menuType, heroMenu, site) {
     html[i++] = "<div id='impactIcon_Prosperity' onclick=\"goHash({'set':'prosperity','indicators':'VADD,JOBS'});\">Prosperity</div>";
     html[i++] = "</div>";
 
-    $('#insertImpactIcons').html(html.join(''));
+    $(document).ready(function() {
+        $('#insertImpactIcons').html(html.join(''));
+    });
+}
+
+function showHeroMenu(menuType, heroMenu, site) {
+    var menuImages = "";
+      $.each(heroMenu, function (key, val) {
+            //alert(key + val);
+            //alert(heroMenu[key].img);
+            menuImages += "<a href='" + val.img + "'><img src='" + val.img + "' style='max-width:120px'></a>";
+      });
+      $(document).ready(function() {
+        $("#menuImages").html(menuImages);
+      });
 }
