@@ -37,13 +37,15 @@ Photo by <a href="https://unsplash.com/@studiodenley?utm_source=unsplash&utm_med
   <div id="hero_holder">
     <div class="bgimg" style="min-height: 600px; background-position: 0 54px; background-image: url('img/hero/andrew-roberts-charging-crop.jpg');">
 
-      <div id="hero-rect">
+      <div class="displayOnload" id="hero-content" style="display: none; min-height: 550px;">
+        <div id="hero-rect">
 
-        <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
-        <div id="relocatedStateMenu"></div><br>
-        <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
+          <div style="font-size:18px; margin-bottom:10px; font-weight:600">Choose a state</div>
+          <div id="relocatedStateMenu"></div><br>
+          <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select Counties and Regions</a>
+        </div>
       </div>
-
+      
     </div>
   </div>
 </div>

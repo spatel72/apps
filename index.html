@@ -10,6 +10,9 @@
 <script type="text/javascript" src="../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
 <script type="text/javascript" src="../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
 
+<script type="text/javascript" src="js/apps-menus.js" id="/apps/js/apps-menus.js"></script>
+<script type="text/javascript" src="js/apps-impact.js" id="/apps/js/apps-impact.js"></script>
+
 <script>
   if(typeof param=='undefined'){ var param={}; }
   //param.state = "SD"
@@ -21,6 +24,7 @@
 
 <script>
   loadMarkdown("apps.md", "readmeDiv", "_parent");
+  renderImpactWidget();
 </script>
 
 
@@ -44,28 +48,37 @@
 </style>
 
 <div id="hero_holder">
-<div id="hero-landscape-image" class="bgimg displayOnload" style="display: none; background-position: 0 54px;">
+<div id="hero-landscape-image" class="bgimg displayOnload" style="display:none; background-position: 0 54px;">
 
-  <div id="hero-rect" class="displayOnload" style="display: none;">
-    <h1 style="padding:0px;margin:0px;margin-bottom:15px;font-size:24px">Community Pages</h1>
-    <div id="relocatedStateMenu"></div><br>
-    <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select counties and regions</a> to view local industry impacts<!--a href="#impact"></a-->
+  <div id="hero-content">
+    <div id="hero-mini"></div>
 
-    <br><br>
+    <div id="hero-rect" class="displayOnload" style="display: none;">
+      <h1 style="padding:0px;margin:0px;margin-bottom:15px;font-size:24px">Community Pages</h1>
+      <div id="relocatedStateMenu"></div><br>
+      <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select counties and regions</a> to view local industry impacts<!--a href="#impact"></a-->
 
-    
-    <div id="readmeDiv"></div>
+      <br><br>
 
-    <b>Create a Community Page</b> - <a href="../localsite/start/">Setup your local webroot and fork repos</a>, then copy or edit a folder in the apps repo. Deploy your updates using GitHub Desktop. More about creating a <a href="../../community/challenge/how/">winning entry</a>.<br><br>
+      
+      <div id="readmeDiv"></div>
 
-    <a href="../community/challenge/">About Web Challenge</a> | <a href="../community/tools/">Lifecycle Tools Overview</a>
+      <b>Create a Community Page</b> - <a href="../localsite/start/">Setup your local webroot and fork repos</a>, then copy or edit a folder in the apps repo. Deploy your updates using GitHub Desktop. More about creating a <a href="../../community/challenge/how/">winning entry</a>.<br><br>
 
-    <div id="parsedOutput"></div>
+      <a href="../community/challenge/">About Web Challenge</a> | <a href="../community/tools/">Lifecycle Tools Overview</a>
 
+      <div id="parsedOutput"></div>
+
+    </div>
   </div>
 
 </div>
 </div>
+
+<!--
+<div id='PurpleAirWidget_57441_module_AQI_conversion_C0_average_10_layer_standard'>Loading PurpleAir Widget...</div>
+<script src='https://www.purpleair.com/pa.widget.js?key=WQDIG1WBX2S88N2Q&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_57441_module_AQI_conversion_C0_average_10_layer_standard'></script>
+-->
 
 </body>
 </html>

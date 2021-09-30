@@ -45,7 +45,7 @@ function showHeroMenu(menuType, heroMenu, site) {
       $.each(heroMenu, function (key, val) {
             //alert(key + val);
             //alert(heroMenu[key].img);
-            menuImages += "<a href='" + val.img + "'><img src='" + val.img + "' style='max-width:120px'></a>";
+            menuImages += "<a href='" + val.img + "'><img src='" + val.img + "'></a>";
       });
       $(document).ready(function() {
         $("#menuImages").html(menuImages);
