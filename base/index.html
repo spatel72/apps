@@ -24,6 +24,30 @@
   param.set = "air"
   param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS"
   // More params: https://model.earth/localsite
+
+
+  // School app menu
+  if(typeof menu=='undefined'){ var menu={}; }
+  menu = {"home":[],"composting":[],"biodiesel":[]}
+  menu.home.img = "/apps/school/img/hero/ses.jpg"
+  menu.home.page = "/apps/school/"
+
+  menu.composting.img = "/apps/school/img/hero/composting.jpg"
+  menu.composting.page = "/apps/composting/"
+
+  menu.biodiesel.img = "/apps/school/img/hero/biodiesel.jpg"
+  menu.biodiesel.page = "/apps/biodiesel/"
+
+  //menu.meetups.img = "/apps/school/img/hero/conference.jpg"
+  //menu.meetups.page = "/apps/events/"
+  //menu.meetups.title = "Climate Change Conference"
+
+  //showImpactMenu("land", menu, "loyola_chicago")
+  $(document).ready(function() {
+    $("#hero-mini").hide();
+  });
+
+  showHeroMenu("feature", menu, "loyola_chicago")
 </script>
 
 <script type="text/javascript" src="../../localsite/js/localsite.js"></script>
@@ -90,17 +114,18 @@ renderImpactWidget();
       </div>
     </div>
 
-    <div id="hero-rect" style="max-width: 680px; float:left">
+
+    <div id="hero-rect" style="max-width: 740px; float:left">
       <!--Later: Choose two states to compare.-->
       <div style="font-size:22px; margin-top:14px; margin-bottom:18px; font-weight:500">Getting Started...</div>
 
       1. Find out where your state and county ranks in combating climate change.<br><br>
       <div id="relocatedStateMenu"></div><br>
 
-      2. Select one of the six main impact areas below. Air, Water, Land, Energy...<br>
-      3. Choose one or more commodities in the center column<br>
-      4. Adjust sliders to view potential impacts to input and output levels.<br>
-      5. Save your settings in your copy of this index.html page.<br>
+      2. Select one of the six main impact areas below. Air, Water, Land, Energy...<br><br>
+      3. Choose one or more commodities in the center column of the input-output chart.<br><br>
+      4. Adjust sliders to view potential impacts to changes in commodity levels.<br><br>
+      5. Copy the parameters from the URL into a copy of one of the <a href="../">index.html pages</a>.<br><br>
 
 
       <div id="choose-counties" style="display:none">
@@ -109,7 +134,16 @@ renderImpactWidget();
 
     </div>
 
-    <div id="hero-mini" style="float:left"></div>
+    <div id="hero-mini" style="float:left; width:100%; max-width: 740px;">
+      
+      <div id="impact-widget-horizontal"></div>
+
+      <div id="insertImpactIcons"></div>
+      <div style="clear:both"></div><br>
+
+    </div>
+
+
 
   </div>
 
@@ -125,11 +159,13 @@ renderImpactWidget();
 
     <div id="dataHeader"></div>
     <div id="dataDisplay"></div>
+    <br>
+
+    <h2>Shared Sections</h2>
+    <div id="menuImages" style="display: none;"></div>
+    <div style="clear:both"></div><br>
 
 </div>
-
-
-
 
 
 </body>

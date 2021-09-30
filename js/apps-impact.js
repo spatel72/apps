@@ -1,6 +1,8 @@
 function renderImpactWidget() {
 	var miniImpact = "<div>Impact Scores</div>"
 	$(document).ready(function() {
-		$("#hero-mini").html(miniImpact);
+		// This currently overrides other
+		//$("#impact-widget-horizontal").html(miniImpact);
+		//$("#impact-widget-vertical").html(miniImpact);
 	});
 }

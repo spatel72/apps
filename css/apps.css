@@ -58,6 +58,9 @@
 #menuImages {
   display: block !important;
 }
+#menuImages > div {
+  float: left;
+}
 #menuImages img {
   max-width: 200px;
   margin-right: 10px;

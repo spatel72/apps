@@ -25,6 +25,22 @@
 <script>
   loadMarkdown("apps.md", "readmeDiv", "_parent");
   renderImpactWidget();
+
+  // School app menu
+  if(typeof menu=='undefined'){ var menu={}; }
+  menu = {"home":[],"composting":[],"biodiesel":[]}
+  menu.home.img = "/apps/school/img/hero/ses.jpg"
+  menu.home.page = "/apps/school/"
+
+  menu.composting.img = "/apps/school/img/hero/composting.jpg"
+  menu.composting.page = "/apps/composting/"
+
+  menu.biodiesel.img = "/apps/school/img/hero/biodiesel.jpg"
+  menu.biodiesel.page = "/apps/biodiesel/"
+
+  showImpactMenu("land", menu, "loyola_chicago")
+  showHeroMenu("feature", menu, "loyola_chicago")
+
 </script>
 
 
@@ -51,7 +67,14 @@
 <div id="hero-landscape-image" class="bgimg displayOnload" style="display:none; background-position: 0 54px;">
 
   <div id="hero-content">
-    <div id="hero-mini"></div>
+    <div id="hero-mini" style="max-width:140px;padding-bottom:12px">
+
+      <b style="margin-bottom:8px; display:block">Impact (mini)</b>
+      <div id="impact-widget-vertical">
+        <div id="insertImpactIcons"></div>
+      </div>
+
+    </div>
 
     <div id="hero-rect" class="displayOnload" style="display: none;">
       <h1 style="padding:0px;margin:0px;margin-bottom:15px;font-size:24px">Community Pages</h1>
