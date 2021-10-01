@@ -1,3 +1,5 @@
-# My Community Page
+# Air Quality
 
-PurpleAir supplies low cost particulate matter sensors and has thus created a community of citizen scientists to collect, hyper-local, real time air quality data for all to access. 
+Monitor the amount of pollution in your air by Utilizing PurpleAir's API.
+
+From the data/API provided by PurpleAir, we can monitor air pollution in your community, reporting the Air Quality Index (AQI) and other important measurements. 
