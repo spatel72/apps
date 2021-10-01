@@ -18,11 +18,12 @@
 <script>
   if(typeof param=='undefined'){ var param={}; }
   param.display = "everything"
-  param.lat = 37
-  param.lon = -95.7
-  param.state = "IA"
-  param.set = "air"
-  param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS"
+  param.naics = "325199" // Other basic organic chemicals
+  param.set = "energy"
+  param.indicators = "ENRG,NNRG,RNRG"
+  param.x = "ENRG"
+  param.y = "HAPS"
+  param.z = "JOBS"
   // More params: https://model.earth/localsite
 
 

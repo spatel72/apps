@@ -18,11 +18,13 @@
 <script>
   if(typeof param=='undefined'){ var param={}; }
   param.display = "everything"
-  param.lat = 37
-  param.lon = -95.7
-  param.state = "IA"
-  param.set = "air"
-  param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS"
+  param.sectors = "562111,562212,562213,562910,562920,562HAZ,562OTH"
+  // param.iomodel = "USEEIOv1.2"
+  param.set = "land"
+  param.indicators = "LAND,MNRL,PEST,METL,CRHW,CMSW,FMSW,CCDD"
+  param.x = "LAND"
+  param.y = "WATR"
+  param.z = "HTOX"
   // More params: https://model.earth/localsite
 
 
