@@ -11,11 +11,58 @@
 <script type="text/javascript" src="../../localsite/js/d3.v5.min.js" id="/localsite/js/d3.v5.min.js"></script>
 <script type="text/javascript" src="../../localsite/js/jquery.min.js" id="/localsite/js/jquery.min.js"></script>
 <script type="text/javascript" src="../../../localsite/js/showdown.min.js" id="/localsite/js/showdown.min.js"></script>
+<script type="text/javascript" src="../js/apps-menus.js" id="/apps/js/apps-menus.js"></script>
+<script type="text/javascript" src="../js/apps-menus.js" id="/apps/js/apps-impact.js"></script>
+
 <script>
 if(typeof param=='undefined'){ var param={}; }
 param.display = "everything"
 param.sectors = "562111,562212,562213,562910,562920,562HAZ,562OTH"
 //param.state = "GA"
+
+// School app menu
+if(typeof menu=='undefined'){ var menu={}; }
+menu = {"home":[],"composting":[],"biodiesel":[],"conference":[]}
+menu.home.img = "/apps/school/img/hero/ses.jpg"
+menu.home.page = "/apps/school/"
+
+menu.composting.img = "/apps/school/img/hero/composting.jpg"
+menu.composting.page = "/apps/composting/"
+
+menu.biodiesel.img = "/apps/school/img/hero/biodiesel.jpg"
+menu.biodiesel.page = "/apps/biodiesel/"
+
+menu.meetups.img = "/apps/school/img/hero/conference.jpg"
+menu.meetups.page = "/apps/events/"
+menu.meetups.title = "Climate Change Conference"
+
+showImpactWidget("land", menu, "loyola_chicago")
+showHeroMenu("feature", menu, "loyola_chicago")
+
+
+
+
+
+// Not used
+if(typeof site=='undefined'){ var site={}; }
+site = {
+	"loyola_chicago": {
+		"menu": {
+			"composting":[{"img":"/apps/school/img/hero/composting.jpg"}],
+			"biodiesel":[{"img":"/apps/school/img/hero/biodiesel.jpg"}],
+			"meetups":[{"img":"../img/impact/land/air.jpg", "title": "Climate Change Conference"}]
+		},
+	},
+	"san_diego": {
+		"menu": {
+			"composting":[{"img":"../img/impact/land/air.jpg"}],
+			"biodiesel":[{"img":"../img/impact/land/air.jpg"}],
+			"meetups":[{"img":"../img/impact/land/air.jpg", "title": "Climate Change Conference"}]
+		},
+	},
+}
+//alert(site)
+
 </script>
 
 <script type="text/javascript" src="../../../localsite/js/localsite.js"></script>
@@ -26,13 +73,23 @@ param.sectors = "562111,562212,562213,562910,562920,562HAZ,562OTH"
 <body>
 
 <div class="content contentpadding">
+
+	<div id="insertImpactIcons"></div>
+	<div style="clear:both"></div><br>
+
+	<div id="menuImages" style="display: none;"></div>
+	<div style="clear:both"></div><br>
+
 	<div id="readmeDiv"></div>
+	
 </div>
 
 <script>
   loadMarkdown("README.md", "readmeDiv", "_parent");
 </script>
 <br><br>
+
+
 
 </body>
 </html>

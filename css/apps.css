@@ -35,10 +35,6 @@
 #resultsTable {
   margin-bottom: 8px;
 }
-#hero-landscape-image {
-  position:absolute;
-  z-index: 100;
-}
 .hero-text {
   float:left;
   color:#fff;
@@ -46,7 +42,16 @@
   padding-right:80px;
   font-weight:800;
 }
-#hero-rect-new {
+@media (max-width: 800px) {
+  .hero-text {
+    float: none;
+  }
+  #hero-rect {
+    width: 100% !important;
+    max-width: 500px !important;
+  }
+}
+.hero-bucket {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 40px;
   margin: 0 auto; /* We'll center instead */
@@ -54,4 +59,17 @@
   padding: 20px 50px 20px 50px;
   overflow: auto;
   float: left;
+}
+#menuImages {
+  display: block !important;
+}
+#menuImages > div {
+  float: left;
+}
+#menuImages img {
+  max-width: 200px;
+  margin-right: 10px;
+}
+#hero-mini {
+
 }
