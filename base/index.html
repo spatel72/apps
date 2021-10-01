@@ -44,7 +44,8 @@
 
   $(document).ready(function() {
     showImpactWidget("land", menu, "my_community_site") // This waits for the DOM to load
-    // Some of your javascript will need to wait for the page to load to access the DOM.  Place it in this ready statement.
+    // Some of your javascript will need to reside in this Ready statement 
+    // This allows the HTML to load before manipulating ID elements on the page below.
     // Example, hide the verticle menu widget:
     //$("#hero-mini").hide();
   });
