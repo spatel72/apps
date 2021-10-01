@@ -35,10 +35,6 @@
 #resultsTable {
   margin-bottom: 8px;
 }
-#hero-landscape-imageXXX {
-  position:absolute;
-  z-index: 100;
-}
 .hero-text {
   float:left;
   color:#fff;
@@ -55,7 +51,7 @@
     max-width: 500px !important;
   }
 }
-#hero-rect-new {
+.hero-bucket {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 40px;
   margin: 0 auto; /* We'll center instead */
