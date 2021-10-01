@@ -6,19 +6,19 @@ Our project makes a real-world impact in addressing the challenge by...
 
 **Innovation**
 
-Is the entry innovative and creative, taking a novel approach?
+Our community sustainability page is innovative and creative and takes a novel approach by...
 
 **Clarity**
 
-We included the following to make the entry easy to understand and accessible...
+Our project includes the following to make information and tools clear, accessible. and easy to understand...
 
 <!--Does it present information clearly?-->
 
 **Implementation**
 
-We made progress in the following areas to create a working (functional) solution...
+Our community sustainability page provides a new functional solution in the area(s) of...
 
 
 **Integration**
 
-Does the entry integrate with other data sources in a community-relevant way?
+New additions created for our project integrate with other work and data in the following ways...
