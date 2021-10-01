@@ -42,9 +42,9 @@
   //menu.meetups.page = "/apps/events/"
   //menu.meetups.title = "Climate Change Conference"
 
-  //showImpactMenu("land", menu, "loyola_chicago")
+  showImpactWidget("land", menu, "loyola_chicago")
   $(document).ready(function() {
-    $("#hero-mini").hide();
+    //$("#hero-mini").hide();
   });
 
   showHeroMenu("feature", menu, "loyola_chicago")
@@ -55,6 +55,7 @@
 
 <script>
 loadMarkdown("README.md", "readmeDiv", "_parent");
+loadMarkdown("ABOUT.md", "aboutDiv", "_parent");
 renderImpactWidget();
 </script>
 
@@ -164,6 +165,8 @@ renderImpactWidget();
     <h2>Shared Sections</h2>
     <div id="menuImages" style="display: none;"></div>
     <div style="clear:both"></div><br>
+
+    <div id="aboutDiv"></div>
 
 </div>
 

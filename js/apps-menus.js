@@ -1,4 +1,4 @@
-function showImpactMenu(menuType, heroMenu, site) {
+function showImpactWidget(menuType, heroMenu, site) {
     var folder = '';
 
     switch (menuType) {
