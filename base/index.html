@@ -81,9 +81,19 @@ renderImpactWidget();
 
 
 <body>
+<!--
+State images are refreshed by localsite/js/map-filters.js when state=XX changes in the URL. 
 
+To show a custom hero image, paste the following css above in the style tag.
+This will override the initial state image.
 
-<!-- State image refreshed by localsite/js/map-filters.js. Displayed once base.css loads. 
+#hero-landscape-image {
+    background-image: url('../school/img/hero/ses.jpg') !important;
+}
+
+Another option is to rename the css snipped above to #hero-landscape-image-local and also rename the hero-landscape-image id below. Then you can remove !important from the snippet.
+
+The hidden hero images are displayed once localsite/css/base.css loads. 
 The .displayOnload divs are displayed when the base.css file loads. This prevents the page from flickering while loading.
 -->
 <div id="hero_holder">
