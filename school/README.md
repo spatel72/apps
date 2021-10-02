@@ -5,3 +5,7 @@ An important dimension of the mission [Loyola University Chicago](https://www.lu
 In particular, SES strives to advance sustainability in operations across all university campuses and to develop an environmentally conscious culture throughout the university.
 
 Initially, this section will highlight three sustainability initiatives at the Lake Shore Campus on the far north side of Chicago, Cook County, Illinois, which we believe to have high potential for replication at other urban colleges and universities.
+
+## Community Environmental Profile for US Zip Code 60626
+
+<img alt="Community Environmental Profile for US Zip Code 60626" src="loyolachicago/CommunityProfile60626.png" width="640"/>
