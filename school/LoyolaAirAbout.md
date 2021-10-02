@@ -1,5 +1,9 @@
-# Loyola Air
+# Loyola Community Air Research Experience (CARE)
 
-about
+The Community Air Research Experience (CARE) is a geoscience learning community that engages underrepresented minority (URM) undergraduates in research to measure and attribute air pollution in Chicago neighborhoods that differ in socioeconomic demographics and proximity to industrial facilities. CARE has three aims: (1) provide an applied, socially relevant research experience for URM students, (2) increase understanding about the spatial distribution and temporal variation of particle pollution in Chicago, and (3) provide air quality data for community discussions about how to reduce air pollution and better protect public health. CARE is funded by the National Science Foundation’s GEOPAths Program.
+ 
+[Project Site](https://sites.google.com/view/caregeopaths)
 
-https://github.com/Code-For-Chicago/Air-Quality
+## Project Status
+
+We are recruiting participants this fall, and the students’ research experience will occur in summer 2021.
