@@ -26,9 +26,13 @@
 <script type="text/javascript" src="../../localsite/js/localsite.js"></script>
 
 <script>
-loadMarkdown("README.md", "readmeDiv", "_parent");
-loadMarkdown("myth1.md", "myth1Div", "_parent");
-loadMarkdown("myth2.md", "myth2Div", "_parent");
+  loadMarkdown("README.md", "readmeDiv", "_parent");
+  loadMarkdown("item1.md", "item1Div", "_parent");
+  loadMarkdown("item2.md", "item2Div", "_parent");
+  // To add more items:
+  // 1) add item content files item3.md, item4.md, etc.
+  // 2) add corresponding loadMarkdown statements here.
+  // 3) add div elements with IDs item3div, item4div, etc. below
 </script>
 
 <!-- Interactive state menu - Display beyond carbon table -->
@@ -76,7 +80,6 @@ The .displayOnload divs are displayed when the base.css file loads. This prevent
 
   <div class="displayOnload" id="hero-content" style="display: none; min-height: 550px;">
     
-    
     <div class="hero-text">
 
       <div style="font-size:60px; line-height: 1em; font-weight:800">Sustainability Myths and Misconceptions</div><br>
@@ -96,8 +99,9 @@ The .displayOnload divs are displayed when the base.css file loads. This prevent
 <div class="content contentpadding">
 
     <div id="readmeDiv"></div>
-    <div id="myth1Div"></div>
-    <div id="myth2Div"></div>
+    <div id="item1Div"></div>
+    <div id="item2Div"></div>
+    <!-- To display additional items, add div elements with IDs item3div, item4div, etc. -->
 
 </div>
 
