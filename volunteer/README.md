@@ -1,3 +1,3 @@
-# Featured Sustainability Conferences and Events
+# Featured Sustainability Volunteering Opportunities
 
 TODO overview
