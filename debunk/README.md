@@ -1,3 +1,3 @@
-# Debunking Some Sustainability Misconceptions
+# Featured Sustainability Myths and Misconceptions
 
 TODO overview
