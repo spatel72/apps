@@ -8,7 +8,9 @@ The Community Air Research Experience (CARE) is a geoscience learning community 
   
 CARE is funded by the National Science Foundation’s GEOPAths Program.
  
+[Project Site](https://sites.google.com/view/caregeopaths)
+
 ## Project Status
 
 We are recruiting participants this fall, and the students’ research experience will occur in summer 2021.
-Loyola students wishing to get involved should visit the [project site](https://sites.google.com/view/caregeopaths)
+Loyola students wishing to get involved should visit the [project site](https://sites.google.com/view/caregeopaths).
