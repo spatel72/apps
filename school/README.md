@@ -1,4 +1,4 @@
-# Sustainability Initiatives at Loyola's Lake Shore Campus
+# Featured School: Loyola University Chicago, Lake Shore Campus
 
 An important dimension of the mission [Loyola University Chicago](https://www.luc.edu)'s [School of Environmental Sustainability](https://www.luc.edu/sustainability) is to advance our knowledge of environmental problems and developing solutions through original research and community outreach.
 
