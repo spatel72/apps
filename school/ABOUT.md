@@ -2,7 +2,7 @@
 
 **Project Impact**
 
-Our project makes a real-world impact in addressing the challenge by...
+Our project makes a real-world impact in addressing the challenge by Urban Agriculture, Biodiesel Production, Composting, and Environmental awareness.
 
 **Innovation**
 
