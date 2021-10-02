@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 <meta charset="utf-8">
-<title>Community Site</title>
+<title>Help Your Community</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 
@@ -17,75 +17,79 @@
 <!-- Set custom app values -->
 <script>
   if(typeof param=='undefined'){ var param={}; }
-  param.display = "navigation"
-  // More params: https://model.earth/localsite
-  
-  showHeroMenu("feature", menu, "my_community_site")
+  param.display = "everything"
+  param.lat = 34.0522
+  param.lon = -118.2437
+  param.titleArray = ["Create","Change"]
+  //param.headerLogo = "<img src='/localsite/img/logo/partners/model-earth.png' style='width:240px'>";//
+  param.state = "CA"
+  param.geo = "US90027"
+  param.show = "industries"
+  param.set = "prosperity"
+  param.indicators = "VADD,JOBS"
+
+  // School app menu
+  if(typeof menu=='undefined'){ var menu={}; }
+  menu = {"Build":[],"Volunteer":[],"Donate":[],"Communicate":[]}
+  menu.home.img = "/apps/volunteer/img/hero/ses.jpg"
+  menu.home.page = "/apps/school/"
+
+  menu.Build.img = "/apps/volunteer/img/hero/composting.jpg"
+  menu.Build.page = "/apps/composting/"
+
+  menu.Donate.img = "/apps/volunteer/img/hero/biodiesel.jpg"
+  menu.Donate.page = "/apps/biodiesel/"
+
+  menu.Communicate.img = "/apps/volunteer/img/hero/conference.jpg"
+  menu.Communicate.page = "/apps/volunteer/"
+  menu.conference.title = "Contact Your Reps"
+
+  //showImpactWidget("land", menu, "loyola_chicago")
+
+
+  showHeroMenu("feature", menu, "loyola_chicago")
 </script>
 
 <script type="text/javascript" src="../../localsite/js/localsite.js"></script>
 
 <script>
-  loadMarkdown("README.md", "readmeDiv", "_parent");
-  loadMarkdown("item1.md", "item1Div", "_parent");
-  loadMarkdown("item2.md", "item2Div", "_parent");
-  // To add more items:
-  // 1) add item content files item3.md, item4.md, etc.
-  // 2) add corresponding loadMarkdown statements here.
-  // 3) add div elements with IDs item3div, item4div, etc. below
+loadMarkdown("/apps/volunteer/README.md", "readmeDiv", "_parent");
+loadMarkdown("ABOUT.md", "aboutDiv", "_parent");
 </script>
 
 <!-- Interactive state menu - Display beyond carbon table -->
 <script type="text/javascript" src="../js/bc.js" id="/apps/js/bc.js"></script>
 
 <style>
-  .bgimg {
-    min-height: 600px;
-  }
   .btn {
     font-weight: 600;
   }
-  #hero-mini {
-    floatX: left;
+  #hero-landscape-image-local {
+    background-image: url('img/hero/ocg-saving-the-ocean2.jpg');
   }
-  #hero-rect {
-    overflow: auto;
-    float: none !important;
-  }
-  #hero-landscape-image {
-    background-image: url('img/hero.jpg') !important;
-  }
+  @media (max-width: 800px) {
+    #hero-landscape-image-local {
+      background-image: url('img/hero/ocg-saving-the-ocean2.jpg');
+    }
+  }   
 </style>
 </head>
 
 
 <body>
-<!--
-State images are refreshed by localsite/js/map-filters.js when state=XX changes in the URL. 
 
-To show a custom hero image, paste the following css above in the style tag.
-This will override the initial state image.
-
-#hero-landscape-image {
-    background-image: url('../school/img/hero/ses.jpg') !important;
-}
-
-Another option is to rename the css snipped above to #hero-landscape-image-local and also rename the hero-landscape-image id below. Then you can remove !important from the snippet.
-
-The hidden hero images are displayed once localsite/css/base.css loads. 
-The .displayOnload divs are displayed when the base.css file loads. This prevents the page from flickering while loading.
--->
+<!-- State image refreshed by localsite/js/map-filters.js. Displayed once base.css loads. -->
 <div id="hero_holder">
-<div id="hero-landscape-image" class="bgimg displayOnload" style="display:none; background-position: 0 54px;">
+<div id="hero-landscape-image-local" class="bgimg" style="z-index:-1; min-height: 550px; background-position: 0 54px; position: absolute; left:0; right:0; opacity: 0.6; background-color:#888;">
+</div>
 
-  <div class="displayOnload" id="hero-content" style="display: none; min-height: 550px;">
-    
-    <div class="hero-text">
 
-      <div style="font-size:60px; line-height: 1em; font-weight:800">Sustainability Volunteering Opportunities</div><br>
-      <div style="font-size:28px; line-height: 1.2em; font-weight:600">
-        Community Initiatives Around the World
-      </div><br>
+<div class="content contentpadding displayOnload" style="display: none; padding-top:60px; min-height: 550px;">
+  <div class="hero-text">
+
+    <div style="font-size:60px; line-height: 1em; font-weight:800">Help Create a More Sustainable Future </div><br>
+    <div style="font-size:28px; line-height: 1.2em; font-weight:600">
+      Get Involved or Help Those Getting Involved
     </div>
 
   </div>
@@ -93,20 +97,36 @@ The .displayOnload divs are displayed when the base.css file loads. This prevent
 </div>
 </div>
 
-<div style="clear:both">
-</div>
+
 
 <div class="content contentpadding">
 
+  <div style="padding:20px; padding-left:0px">
+    <b>How To Help:</b>
+      <a href="https://www.sunrisemovement.org/find-a-sunrise-hub-near-you/">Build Model Earth</a>
+    | <a href="https://www.surfrider.org/">Volunteer Locally</a>
+    | <a href="conference.html">Donate Locally</a>
+    |  <a href="conference.html">Local Educational Resources</a>
+    |  <a href="conference.html"> Discuss Locally</a>
+  </div>
+
+  Links coming soon...<br>
+  <div id="menuImages" style="display: none;"></div>
+  <div style="clear:both"></div><br>
+
+  <div style="clear:both">
+  </div>
+
+
     <div id="readmeDiv"></div>
-    <div id="item1Div"></div>
-    <div id="item2Div"></div>
-    <!-- To display additional items, add div elements with IDs item3div, item4div, etc. -->
+
+    <div id="dataHeader"></div>
+    <div id="dataDisplay"></div>
+    <br>
+    
+    <div id="aboutDiv"></div>
 
 </div>
 
-
 </body>
 </html>
-
-
