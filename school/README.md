@@ -8,4 +8,4 @@ Initially, this section will highlight three sustainability initiatives at the L
 
 ## Community Environmental Profile for US Zip Code 60626
 
-<img alt="Community Environmental Profile for US Zip Code 60626" src="loyolachicago/CommunityProfile60626.png" width="640"/>
+<img alt="Community Environmental Profile for US Zip Code 60626" src="CommunityProfile60626.png" width="640"/>
