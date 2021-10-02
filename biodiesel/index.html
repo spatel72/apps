@@ -18,29 +18,15 @@
 <script>
   if(typeof param=='undefined'){ var param={}; }
   param.display = "everything"
-  param.lat = 37
-  param.lon = -95.7
-  param.state = "NY"
-  param.set = "air"
-  param.indicators = "GHG,GCC,MGHG,OGHG,HRSP,OZON,SMOG,HAPS"
+  param.naics = "325199" // Other basic organic chemicals
+  param.set = "energy"
+  param.indicators = "ENRG,NNRG,RNRG"
+  param.x = "ENRG"
+  param.y = "HAPS"
+  param.z = "JOBS"
   // More params: https://model.earth/localsite
-
-
-  // Shared Sections menu
-  if(typeof menu=='undefined'){ var menu={}; }
-  // IMPORTANT: The names on this line must include the param's below it.
-  menu = {"home":[],"composting":[],"biodiesel":[]}
-
-  menu.home.img = "/apps/school/img/hero/ses.jpg"
-  menu.home.page = "/apps/school/"
-
-  menu.composting.img = "/apps/school/img/hero/composting.jpg"
-  menu.composting.page = "/apps/composting/"
-
-  menu.biodiesel.img = "/apps/school/img/hero/biodiesel.jpg"
-  menu.biodiesel.page = "/apps/biodiesel/"
-
-  showHeroMenu("custom", menu, "my_community_site")
+  
+  showHeroMenu("feature", menu, "my_community_site")
 
   $(document).ready(function() {
     showImpactWidget("land", menu, "my_community_site") // This waits for the DOM to load
@@ -49,19 +35,15 @@
     // Example, hide the verticle menu widget:
     //$("#hero-mini").hide();
   });
-  
+
 </script>
 
 <script type="text/javascript" src="../../localsite/js/localsite.js"></script>
 
 
 <script>
-// If edits to your README.md don't appear, clear your cache for prior 24 hours.
-// Don’t clear more than 24hrs or you’ll wipe out your saved passwords and cookie settings.
 loadMarkdown("README.md", "readmeDiv", "_parent");
 loadMarkdown("ABOUT.md", "aboutDiv", "_parent");
-
-
 renderImpactWidget();
 </script>
 
@@ -81,6 +63,9 @@ renderImpactWidget();
   #hero-rect {
     overflow: auto;
     float: none !important;
+  }
+  #hero-landscape-image {
+    background-image: url('img/hero.jpg') !important;
   }
 </style>
 </head>
@@ -110,48 +95,21 @@ The .displayOnload divs are displayed when the base.css file loads. This prevent
     
     <div class="hero-text">
 
-      <div style="font-size:60px; line-height: 1em; font-weight:800">Impact<br>Profiles</div><br>
+      <div style="font-size:60px; line-height: 1em; font-weight:800">Biodiesel</div><br>
       <div style="font-size:28px; line-height: 1.2em; font-weight:600">
-        Generate Environmental Footprints
+        Find out how your state ranks in this sector.
       </div><br>
-
-      <div style="font-size:20px; line-height: 1.2em;">
-        <br>
-
-        <div style="font-size:18px;">
-
-
-        </div>
-
-        <br>
-      </div>
     </div>
-
 
     <div id="hero-rect" style="max-width: 740px; float:left">
       
-      <div style="font-size:22px; margin-top:14px; margin-bottom:18px; font-weight:500">Choose your state...</div>
-
       <div id="relocatedStateMenu"></div><br>
-
 
       <div id="choose-counties" style="display:none">
         <a href="#mapview=counties" onclick="$('#filterClickLocation').click();return false;">Select one or more counties</a><br>
       </div>
 
     </div>
-
-    <div id="hero-mini" style="float:left; width:100%; max-width: 740px;">
-      
-      Enter your city, state or zip...<br><br>
-      <div id="impact-widget-horizontal"></div>
-
-      <div id="insertImpactIcons"></div>
-      <div style="clear:both"></div><br>
-
-    </div>
-
-
 
   </div>
 
@@ -168,10 +126,6 @@ The .displayOnload divs are displayed when the base.css file loads. This prevent
     <div id="dataHeader"></div>
     <div id="dataDisplay"></div>
     <br>
-
-    <h2>Shared Sections</h2>
-    <div id="menuImages" style="display: none;"></div>
-    <div style="clear:both"></div><br>
 
     <div id="aboutDiv"></div>
 
