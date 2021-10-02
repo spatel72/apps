@@ -1,3 +1,3 @@
-# Upcoming Sustainability Conferences and Events
+# Featured Sustainability Conferences and Events
 
 TODO overview
