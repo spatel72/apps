@@ -40,7 +40,18 @@ function showImpactWidget(menuType, heroMenu, site) {
     });
 }
 
-function showHeroMenu(menuType, heroMenu, site) {
+function showHeroMenu(menuType, menu, site) {
+
+
+  menu.home.img = "/apps/school/img/hero/ses.jpg"
+  menu.home.page = "/apps/school/"
+
+  menu.composting.img = "/apps/school/img/hero/composting.jpg"
+  menu.composting.page = "/apps/composting/"
+
+  menu.biodiesel.img = "/apps/school/img/hero/biodiesel.jpg"
+  menu.biodiesel.page = "/apps/biodiesel/"
+
     var menuImages = "";
       $.each(heroMenu, function (key, val) {
             //alert(key + val);
